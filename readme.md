@@ -4,7 +4,7 @@
 
 ## Details
 
-You can access the demo [here](https://cssninjastudio.github.io/hr/). HR is built with[Bulma](https://bulma.io)
+You can access the demo [here](https://cssninjastudio.github.io/hr/index.html). HR is built with[Bulma](https://bulma.io)
 
 
 ## Usage
