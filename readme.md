@@ -50,7 +50,7 @@ If you've found an issue or a bug, you can report it in the issues section of th
 
 ## More
 
-You liked Fresh? Find more premium bulma templates on [Css Ninja](https://cssninja.io/category/all).
+You liked HR? Find more premium bulma templates on [Css Ninja](https://cssninja.io/category/all).
 
 Check also our premium Envato bulma themes [Css Ninja](https://cssninja.io/themes).
 
