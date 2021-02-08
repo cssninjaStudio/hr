@@ -6292,7 +6292,7 @@ var _axios = _interopRequireDefault(require("axios"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
-_axios["default"].defaults.baseURL = 'http://localhost:5080'; //axios.defaults.baseURL = "https://ninja-json-server.herokuapp.com";
+_axios["default"].defaults.baseURL = 'https://ninja-json-server.herokuapp.com'; //axios.defaults.baseURL = "https://ninja-json-server.herokuapp.com";
 
 function initPosts() {
   return {

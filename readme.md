@@ -27,7 +27,7 @@ npm run server
 ## Features
 
 * Gulp 4 and nodejs 12.13.0 (minimum)
-* Upgraded Bulma to 0.9.1
+* Bulma 0.9.2
 * ES6 support
 * Alpine JS
 * JSON server running with concurrently
