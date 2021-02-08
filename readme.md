@@ -2,6 +2,8 @@
 
 > HR is a sample alpine JS + Bulma sample app built by [Css Ninja Studio](https://cssninja.io). HR is licensed under the MIT license.
 
+![Screenshot](https://cssninja.io/storage/app/media/github/hr-home.png "HR landing")
+
 ## Details
 
 You can access the demo [here](https://cssninjastudio.github.io/hr/index.html). HR is built with[Bulma](https://bulma.io)
