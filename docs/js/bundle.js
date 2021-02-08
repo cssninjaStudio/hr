@@ -6225,7 +6225,7 @@ exports.initNavbar = initNavbar;
 var _searchJSON = require("./searchJSON");
 
 //const url = "http://localhost:5080/employees";
-var url = "https://cors-anywhere.herokuapp.com//https://ninja-json-server.herokuapp.com/employees";
+var url = "https://cors-anywhere.herokuapp.com/https://ninja-json-server.herokuapp.com/employees";
 
 function initNavbar() {
   return {
@@ -6366,7 +6366,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 function getBaseAPI() {
   return _axios["default"].create({
     //baseURL: 'http://localhost:5080'
-    baseURL: 'https://cors-anywhere.herokuapp.com//https://ninja-json-server.herokuapp.com'
+    baseURL: 'https://cors-anywhere.herokuapp.com/https://ninja-json-server.herokuapp.com'
   });
 }
 
