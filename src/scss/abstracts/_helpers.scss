@@ -1,0 +1,345 @@
+/*! _helpers.scss | HR | Css ninja 2020-2021 */
+
+/*
+    1. Color & Background
+    2. State
+    3. Border Radius
+    4. Border
+    5. Height
+    6. Width
+    7. Margin
+    8. Responsive Display
+    9. Responsive Flex
+    10. Overflow
+*/
+
+/* ==========================================================================
+1. Sizing helpers
+========================================================================== */
+
+/* ==========================================================================
+1. Color & Background
+========================================================================== */
+
+$colors: ("white": $white, "primary": $primary, "secondary": $secondary, "accent": $accent, "info": $info, "success": $success, "warning": $warning, "danger": $danger, "h-purple": $h-purple, "h-blue": $h-blue, "h-green": $h-green, "h-orange": $h-orange, "h-red": $h-red, "h-yellow": $h-yellow, "javascript": $javascript, "angular": $angular, "reactjs": $reactjs, "android": $android, "swift": $swift, "vuejs": $vuejs, "wordpress": $wordpress, "csharp": $csharp, "nodejs": $nodejs, "html": $html, "facebook": $facebook, "twitter": $twitter, "linkedin": $linkedin, "tumblr": $tumblr, "github": $github, "dribbble": $dribbble, "google-plus": $google-plus, "youtube": $youtube, "reddit": $reddit, "invision": $invision, "amazon": $amazon, "instagram": $instagram, "grey": darken($widget-grey, 2%));
+
+@mixin color-modifiers($attribute, $prefix) {
+    @each $name, $hex in $colors {
+        &#{$prefix}#{$name} {
+            #{$attribute}: $hex;
+        }
+    }
+}
+
+.text {
+    @include color-modifiers($attribute: "color", $prefix: "-");
+}
+
+.bg {
+    @include color-modifiers($attribute: "background", $prefix: "-");
+}
+
+/* ==========================================================================
+2. State
+========================================================================== */
+
+.is-hidden {
+    display: none !important;
+}
+
+.no-click {
+    pointer-events: none !important;
+}
+
+/* ==========================================================================
+3. Border Radius
+========================================================================== */
+
+.is-circle {
+    border-radius: 50% !important;
+}
+
+.is-rounded-md {
+    border-radius: .625rem !important;
+}
+
+.is-rounded-lg {
+    border-radius: .825rem !important;
+}
+
+/* ==========================================================================
+4. Border
+========================================================================== */
+
+.has-border {
+    border: 1px solid $border;
+}
+
+.has-light-shadow {
+    box-shadow: $light-box-shadow;
+}
+
+/* ==========================================================================
+5. Height
+========================================================================== */
+
+.h-full {
+    height: 100%;
+}
+
+.h-screen {
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+6. Width
+========================================================================== */
+
+.w-full {
+    width: 100%;
+}
+
+.max-w-1\/5 {
+    max-width: 20%;
+}
+
+.max-w-1\/4 {
+    max-width: 25%;
+}
+
+.max-w-1\/3 {
+    max-width: 33.3%;
+}
+
+.max-w-1\/2 {
+    max-width: 50%;
+}
+
+.max-w-full {
+    max-width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+    .max-w-mobile {
+        &.max-w-1\/5, &.max-w-1\/4, &.max-w-1\/3, &.max-w-1\/2 {
+            max-width: 100% !important;
+            width: 100% !important;
+            min-width: 100% !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+        }
+    }
+}
+
+/* ==========================================================================
+7. Margin
+========================================================================== */
+
+.no-m {
+    margin: 0 !important;
+}
+
+.mx-auto {
+    width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* ==========================================================================
+8. Responsive Display
+========================================================================== */
+
+@media only screen and (max-width: 767px) {
+    .b-hidden-mobile {
+        display: none !important;
+    }
+
+    .b-only-mobile {
+        display: block !important;
+    }
+
+    .b-only-mobile-flex {
+        display: flex !important;
+    }
+
+    .b-centered-mobile {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .b-hidden-tablet-p {
+        display: none !important;
+    }
+
+    .b-flex-tablet-p {
+        display: flex !important;
+    }
+
+    .b-only-tablet-p {
+        display: block !important;
+    }
+
+    .b-only-tablet-p-flex {
+        display: flex !important;
+    }
+
+    .b-centered-tablet-p {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 540px;
+        text-align: center;
+    }
+
+    .b-centered-tablet-p {
+        text-align: center;
+    }
+
+    .max-w-tablet-p {
+        width: 100%;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .max-w-tp-6 {
+        max-width: 40rem;
+    }
+
+    .max-w-tp-5 {
+        max-width: 33.75rem;
+    }
+
+    .max-w-tp-4 {
+        max-width: 27.5rem;
+    }
+
+    .max-w-tp-full {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    .b-hidden-tablet-l {
+        display: none !important;
+    }
+
+    .b-flex-tablet-l {
+        display: flex !important;
+    }
+
+    .b-only-tablet-l {
+        display: block !important;
+    }
+}
+
+@media only screen and (min-width: 768px) and (orientation: landscape) {
+    .b-only-mobile {
+        display: none !important;
+    }
+
+    .b-only-tablet-p {
+        display: none !important;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .b-hidden-desktop {
+        display: none !important;
+    }
+}
+
+/* ==========================================================================
+9. Responsive Flex
+========================================================================== */
+
+@media only screen and (max-width: 767px) {
+    .b-only-mobile-flex-wrap {
+        flex-wrap: wrap !important;
+    }
+
+    .b-columns-half-mobile {
+        display: flex;
+        flex-wrap: wrap;
+
+        .column {
+            width: 50% !important;
+            min-width: 50% !important;
+            max-width: 50% !important;
+        }
+    }
+
+    .d-column-mobile {
+        flex-direction: column;
+    }
+
+    .d-column-r-mobile {
+        flex-direction: column-reverse;
+    }
+
+    .j-center-mobile {
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    .b-columns-half-tablet-p {
+        display: flex;
+        flex-wrap: wrap;
+
+        .column {
+            width: 50% !important;
+            min-width: 50% !important;
+            max-width: 50% !important;
+        }
+    }
+
+    .b-columns-third-tablet-p {
+        display: flex;
+        flex-wrap: wrap;
+
+        .column {
+            width: 33.3% !important;
+            min-width: 33.3% !important;
+            max-width: 33.3% !important;
+        }
+    }
+
+    .d-column-tablet-p {
+        flex-direction: column;
+    }
+
+    .d-column-r-tablet-p {
+        flex-direction: column-reverse;
+    }
+
+    .j-center-tablet-p {
+        justify-content: center;
+    }
+}
+
+/* ==========================================================================
+7. Scroll helpers
+========================================================================== */
+
+.overflow-hidden {
+    overflow: hidden !important;
+}
+
+.overflow-x-auto {
+    overflow-x: auto;
+}
+
+.overflow-y-auto {
+    overflow-y: auto;
+}
+
+.has-slimscroll {
+  &::-webkit-scrollbar {
+      width: 6px !important;
+  }
+
+  &::-webkit-scrollbar-thumb {
+      border-radius: 10px !important;
+      background: rgba(0, 0, 0, 0.2) !important;
+  }
+}

@@ -1,0 +1,33 @@
+/*! main.scss | HR | Css ninja 2021-2022 */
+
+/* ==========================================================================
+SCSS Imports
+========================================================================== */
+
+@import "abstracts/variables";
+@import "abstracts/brands";
+@import "abstracts/shadows";
+@import "abstracts/typography";
+
+@import "../sass/bulma";
+
+@import "utilities/utilities";
+
+@import "abstracts/animations";
+@import "abstracts/helpers";
+
+@import "components/pageloader";
+@import "components/placeload";
+@import "components/navbar";
+@import "components/hamburger";
+@import "components/button";
+@import "components/card";
+@import "components/table";
+@import "components/tag";
+
+@import "forms/input";
+
+@import "layout/hero";
+@import "layout/section";
+@import "layout/footer";
+@import "layout/details";

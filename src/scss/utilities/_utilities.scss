@@ -1,0 +1,292 @@
+/*! _utilities.scss | HR | Css ninja 2020-2021 */
+
+/*
+    1. Reponsive variants
+*/
+
+/* ==========================================================================
+1. Reponsive variants
+========================================================================== */
+
+@use 'sass:map';
+@use 'variants' as * with (
+  $breakpoints: (
+    'mobile': 767px,
+    'small': 768px,
+    'large': 1024px,
+    'wide': 1280px,
+  )
+);
+
+//Yellow
+.yellow {
+  @include variants('responsive' 'hover' 'group-hover') {
+    color: #FFE135;
+  }
+}
+
+//Text
+$text: (
+  'left': left,
+  'right': right,
+  'centered': center,
+  'justify': justify,
+);
+
+.text {
+  @include options($text, 'responsive') using ($value) {
+    text-align: $value;
+  }
+}
+
+//Spacing
+$spacing: (
+  'px': 1px,
+  '0': 0,
+  '1': .25rem,
+  '2': .5rem,
+  '3': .75rem,
+  '4': 1rem,
+  '5': 1.25rem,
+  '6': 1.5rem,
+  '8': 2rem,
+  '10': 2.5rem,
+  '12': 3rem,
+  '16': 4rem,
+  '20': 5rem,
+  '24': 6rem,
+  '32': 8rem,
+  '40': 10rem,
+  '48': 12rem,
+  '56': 14rem,
+  '64': 16rem,
+);
+
+// Add auto to the positive margin classes
+$margin: map.merge((
+  'auto': auto
+), $spacing);
+
+@include variants('responsive') using ($props...) {
+
+//Padding
+
+  .p {
+    @include options($spacing, $props...) using ($value) {
+      padding: $value;
+    }
+  }
+
+  .px {
+    @include options($spacing, $props...) using ($value) {
+      padding-right: $value;
+      padding-left: $value;
+    }
+  }
+
+  .py {
+    @include options($spacing, $props...) using ($value) {
+      padding-bottom: $value;
+      padding-top: $value;
+    }
+  }
+
+  .pt {
+    @include options($spacing, $props...) using ($value) {
+      padding-top: $value;
+    }
+  }
+
+  .pr {
+    @include options($spacing, $props...) using ($value) {
+      padding-right: $value;
+    }
+  }
+
+  .pb {
+    @include options($spacing, $props...) using ($value) {
+      padding-bottom: $value;
+    }
+  }
+
+  .pl {
+    @include options($spacing, $props...) using ($value) {
+      padding-left: $value;
+    }
+  }
+
+
+  //Positive Margin
+
+  .m {
+    @include options($margin, $props...) using ($value) {
+      margin: $value;
+    }
+  }
+
+  .mx {
+    @include options($margin, $props...) using ($value) {
+      margin-right: $value;
+      margin-left: $value;
+    }
+  }
+
+  .my {
+    @include options($margin, $props...) using ($value) {
+      margin-bottom: $value;
+      margin-top: $value;
+    }
+  }
+
+  .mt {
+    @include options($margin, $props...) using ($value) {
+      margin-top: $value;
+    }
+  }
+
+  .mr {
+    @include options($margin, $props...) using ($value) {
+      margin-right: $value;
+    }
+  }
+
+  .mb {
+    @include options($margin, $props...) using ($value) {
+      margin-bottom: $value;
+    }
+  }
+
+  .ml {
+    @include options($margin, $props...) using ($value) {
+      margin-left: $value;
+    }
+  }
+
+
+  //Negative Margin
+
+  .-m {
+    @include options($spacing, $props...) using ($value) {
+      margin: -$value;
+    }
+  }
+
+  .-mx {
+    @include options($spacing, $props...) using ($value) {
+      margin-right: -$value;
+      margin-left: -$value;
+    }
+  }
+
+  .-my {
+    @include options($spacing, $props...) using ($value) {
+      margin-bottom: -$value;
+      margin-top: -$value;
+    }
+  }
+
+  .-mt {
+    @include options($spacing, $props...) using ($value) {
+      margin-top: -$value;
+    }
+  }
+
+  .-mr {
+    @include options($spacing, $props...) using ($value) {
+      margin-right: -$value;
+    }
+  }
+
+  .-mb {
+    @include options($spacing, $props...) using ($value) {
+      margin-bottom: -$value;
+    }
+  }
+
+  .-ml {
+    @include options($spacing, $props...) using ($value) {
+      margin-left: -$value;
+    }
+  }
+}
+
+//Width
+$maxwidths: (
+  'w-1': 8.75rem,
+  'w-2': 15rem,
+  'w-3': 21.25rem,
+  'w-4': 27.5rem,
+  'w-5': 33.75rem,
+  'w-6': 40rem,
+  'w-7': 46.25rem,
+  'w-8': 52.5rem,
+  'w-9': 58.75rem,
+  'w-fifth': 20%,
+  'w-fourth': 25%,
+  'w-third': 33.3%,
+  'w-half': 50%,
+  'w-full': 100%,
+);
+
+@include variants('responsive') using ($props...) {
+
+  .max {
+    @include options($maxwidths, $props...) using ($value) {
+      max-width: $value;
+    }
+  }
+}
+
+
+//blocks
+$sizes: (
+  '24x24': 24px,
+  '28x28': 28px,
+  '32x32': 32px,
+  '36x36': 36px,
+  '40x40': 40px,
+  '44x44': 44px,
+  '48x48': 48px,
+  '52x52': 52px,
+  '56x56': 56px,
+  '60x60': 60px,
+  '70x70': 70px,
+  '80x80': 80px,
+  '90x90': 90px,
+  '100x100': 100px,
+  '110x110': 110px,
+  '120x120': 120px,
+  '130x130': 130px,
+  '140x140': 140px,
+  '150x150': 150px,
+  '175x175': 175px,
+  '200x200': 200px,
+);
+
+@include variants('responsive') using ($props...) {
+
+    .is {
+      @include options($sizes, $props...) using ($value) {
+        min-width: $value !important;
+        width: $value !important;
+        max-height: $value !important;
+        height: $value !important;
+      }
+    }
+}
+
+//Layout
+$display: (
+  'block': block,
+  'inline-block': inline-block,
+  'inline': inline,
+  'flex': flex,
+  'inline-flex': inline-flex,
+  'grid': grid,
+  'inline-grid': inline-grid,
+  'hidden': none,
+) !default;
+
+@include options($display, 'responsive') using ($value) {
+  display: $value;
+}

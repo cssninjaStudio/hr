@@ -1,0 +1,150 @@
+/*! _input.scss | HR | Css ninja 2020-2021 */
+
+/*
+    1. Field
+    2. Control
+    3. Input
+    4. Textarea
+*/
+
+/* ==========================================================================
+1. Field
+========================================================================== */
+
+.field {
+  > label {
+    font-family: $font;
+    font-size: 0.95rem;
+    color: $medium-text;
+  }
+}
+
+/* ==========================================================================
+2. Control
+========================================================================== */
+
+.control {
+  &.has-icons-left,
+  &.has-icons-right {
+    .input {
+      &.is-medium {
+        ~ .icon {
+          height: 46px;
+          width: 46px;
+        }
+      }
+
+      &.is-large {
+        ~ .icon {
+          height: 54px;
+          width: 54px;
+        }
+      }
+
+      &:not(.is-medium):not(.is-large) {
+        ~ .icon {
+          height: 40px;
+          width: 40px;
+        }
+      }
+    }
+  }
+
+  &.has-icon {
+    .form-icon {
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 40px;
+      width: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $placeholder;
+      transition: color 0.3s;
+
+      &.is-medium {
+        height: 46px;
+        width: 46px;
+      }
+
+      &.is-large {
+        height: 54px;
+        width: 54px;
+      }
+
+      svg {
+        height: 18px;
+        width: 18px;
+        stroke-width: 1.6px;
+        transition: stroke 0.3s;
+      }
+    }
+
+    .input {
+      padding-left: 40px;
+
+      &.is-medium {
+        padding-left: 46px;
+      }
+
+      &.is-large {
+        padding-left: 54px;
+      }
+
+      &:focus {
+        ~ .form-icon {
+          color: $secondary;
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+3. Input
+========================================================================== */
+
+.input {
+  transition: all 0.3s;
+  box-shadow: none;
+  border-color: $border;
+
+  &:focus {
+    box-shadow: $light-box-shadow;
+    border-color: darken($border, 2%);
+
+    ~ .icon {
+      color: $primary !important;
+    }
+  }
+
+  &.is-medium {
+    height: 46px;
+    font-size: 1.15rem;
+  }
+
+  &.is-large {
+    height: 54px;
+    font-size: 1.35rem;
+  }
+
+  ~ .icon {
+    transition: color 0.3s;
+  }
+}
+
+/* ==========================================================================
+4. Textarea
+========================================================================== */
+
+.textarea {
+  transition: all 0.3s;
+  box-shadow: none;
+  border-color: $border;
+
+  &:focus {
+    box-shadow: $light-box-shadow;
+    border-color: darken($border, 2%);
+  }
+}

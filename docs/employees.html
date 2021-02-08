@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HR | Bulma + Alpine JS sample application</title>
+
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+
+<body>
+
+    <div id="pageloader" class="pageloader"></div>
+    <div id="infraloader" class="infraloader is-active"></div>
+    <nav class="navbar is-transparent is-centered is-fixed-top is-fade" x-data="initNavbar()"  x-on:scroll.window="scroll()" 
+        :class="{
+            'is-scrolled': scrolled,
+            '': !scrolled,
+            'is-solid': mobileOpen,
+            '': !mobileOpen,
+            'is-search-mobile': mobileSearch,
+            '': !mobileSearch
+        }">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    <img class="navbar-logo" src="img/logo/logo.svg" alt="">
+                </a>
+                <a class="navbar-item is-icon" @click="toggleMobileSearch()">
+                    <i data-feather="search"></i>
+                </a>
+                <div class="navbar-burger" @click="openMobileMenu()">
+                    <div class="menu-toggle">
+                        <div class="icon-box-toggle is-navbar" :class="{
+                                'active': mobileOpen,
+                                '': !mobileOpen
+                            }">
+                            <div class="rotate">
+                                <i class="icon-line-top"></i>
+                                <i class="icon-line-center"></i>
+                                <i class="icon-line-bottom"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-menu b-centered-mobile b-centered-tablet-p" :class="{
+                    'is-active': mobileOpen,
+                    '': !mobileOpen
+                }">
+                <div class="navbar-start">
+                    <div class="left-brand">
+                        <a class="navbar-item" href="/">
+                            <img src="img/logo/logo.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-center">
+                    <div class="navbar-item is-search">
+                        <div class="control has-icons-left has-icons-right">
+                            <input x-on:keyup="searchData($event)" x-model="searchModel" class="input is-rounded" type="text" placeholder="Search...">
+                            <span class="icon is-small is-left">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-search">
+                                    <circle cx="11" cy="11" r="8"></circle>
+                                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                                </svg>
+                            </span>
+                            <span class="icon is-small is-close is-right" @click.prevent="toggleMobileSearch()" 
+                                :class="{ '': searchModel === '' }">
+                                <i data-feather="x" class="no-click"></i>
+                            </span>
+                            <div id="search-results" class="search-results has-slimscroll"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navbar-end">
+                    <a href="employees.html" class="navbar-item">Explore</a>
+                    <a href="https://cssninja.io/" class="navbar-item">Help</a>
+                    <div class="navbar-item">
+                        <a href="https://cssninja.io/contact" class="button is-primary">
+                            <span>Get in Touch</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>    
+    
+    <div class="hero is-grey is-center">
+        <div class="hero-body">
+            <div class="container">
+                <div class="columns is-vcentered mt-6">
+                    <div class="column">
+                        <div class="pt-10 pb-6">
+                            <h1 class="title is-1 is-bold">
+                                Employees
+                            </h1>
+                            <p class="subtitle is-5 mb-4 mx-auto max-w-5 b-centered-tablet-p text-light">
+                                Welcome to the employees directory. There are a lot of highly skilled and talented people to
+                                discover.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <div class="container">
+    
+            <div x-data="initEmployees()" x-init="getEmployees()" class="pt-4 pb-12 mx-auto max-w-8">
+    
+                <template x-if="!isLoading">
+                    <div class="flex-table">
+    
+                        <!--Table header-->
+                        <div class="flex-table-header">
+                            <span class="is-grow">Employee</span>
+                            <span>Department</span>
+                            <span>Location</span>
+                            <span>Status</span>
+                            <span class="cell-end">Actions</span>
+                        </div>
+        
+                        <div class="flex-list-inner">
+                            <!--Table item-->
+                            <template x-for="(employee, index) in employees" :key="index">
+                                <div class="flex-table-item">
+                                    <div class="flex-table-cell is-media is-grow">
+                                        <img class="block is-44x44 is-circle no-m" :src="employee.photo" alt="">
+                                        <div>
+                                            <span class="item-name dark-inverted" x-text="employee.fullName">John Doe</span>
+                                            <span class="item-meta">
+                                                <span x-text="employee.position">Product Manager</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="flex-table-cell" data-th="Department">
+                                        <span class="text-medium" x-text="employee.department">Marketing</span>
+                                    </div>
+                                    <div class="flex-table-cell" data-th="Location">
+                                        <span class="text-light" x-text="employee.location">New York, NY</span>
+                                    </div>
+                                    <div class="flex-table-cell" data-th="Status">
+                                        <template x-if="employee.status === 'Available'">
+                                            <span class="tag is-success is-rounded" x-text="employee.status">Status</span>
+                                        </template>
+                                        <template x-if="employee.status === 'Away'">
+                                            <span class="tag is-rounded" x-text="employee.status">Status</span>
+                                        </template>
+                                        <template x-if="employee.status === 'Busy'">
+                                            <span class="tag is-danger is-rounded" x-text="employee.status">Status</span>
+                                        </template>
+                                    </div>
+                                    <div class="flex-table-cell cell-end" data-th="Actions">
+                                        <a :href="'employee.html?id=' + employee.id" class="button view-details-button is-pushed-mobile">View</a>
+                                    </div>
+                                </div>
+                            </template>
+                        </div>
+        
+                    </div>
+                </template>
+                
+                <template x-if="isLoading">
+                    <div class="flex-table">
+                        <!--Table header-->
+                        <div class="flex-table-header">
+                            <span class="is-grow">
+                                <span class="content-shape loads w-60"></span>
+                            </span>
+                            <span>
+                                <span class="content-shape loads w-60"></span>
+                            </span>
+                            <span>
+                                <span class="content-shape loads w-60"></span>
+                            </span>
+                            <span>
+                                <span class="content-shape loads w-60"></span>
+                            </span>
+                            <span class="cell-end">
+                                <span class="content-shape loads w-60"></span>
+                            </span>
+                        </div>
+        
+                        <!--Table item-->
+                        <div class="flex-table-item">
+                            <div class="flex-table-cell is-media is-grow">
+                                <div class="block is-44x44 is-circle no-m loads" alt=""></div>
+                                <div>
+                                    <span class="item-name dark-inverted">
+                                        <span class="content-shape loads title-shape"></span>
+                                    </span>
+                                    <span class="item-meta">
+                                        <span class="content-shape loads subtitle-shape"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex-table-cell" data-th="Department">
+                                <span class="content-shape loads w-80"></span>
+                            </div>
+                            <div class="flex-table-cell" data-th="Location">
+                                <span class="content-shape loads w-80"></span>
+                            </div>
+                            <div class="flex-table-cell" data-th="Status">
+                                <span class="content-shape loads w-80"></span>
+                            </div>
+                            <div class="flex-table-cell cell-end" data-th="Actions">
+                                <span class="content-shape loads w-80"></span>
+                            </div>
+                        </div>
+        
+                        <!--Table item-->
+                        <div class="flex-table-item">
+                            <div class="flex-table-cell is-media is-grow">
+                                <div class="block is-44x44 is-circle no-m loads" alt=""></div>
+                                <div>
+                                    <span class="item-name dark-inverted">
+                                        <span class="content-shape loads title-shape"></span>
+                                    </span>
+                                    <span class="item-meta">
+                                        <span class="content-shape loads subtitle-shape"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex-table-cell" data-th="Department">
+                                <span class="content-shape loads w-80"></span>
+                            </div>
+                            <div class="flex-table-cell" data-th="Location">
+                                <span class="content-shape loads w-80"></span>
+                            </div>
+                            <div class="flex-table-cell" data-th="Status">
+                                <span class="content-shape loads w-80"></span>
+                            </div>
+                            <div class="flex-table-cell cell-end" data-th="Actions">
+                                <span class="content-shape loads w-80"></span>
+                            </div>
+                        </div>
+        
+                        <!--Table item-->
+                        <div class="flex-table-item">
+                            <div class="flex-table-cell is-media is-grow">
+                                <div class="block is-44x44 is-circle no-m loads" alt=""></div>
+                                <div>
+                                    <span class="item-name dark-inverted">
+                                        <span class="content-shape loads title-shape"></span>
+                                    </span>
+                                    <span class="item-meta">
+                                        <span class="content-shape loads subtitle-shape"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex-table-cell" data-th="Department">
+                                <span class="content-shape loads w-80"></span>
+                            </div>
+                            <div class="flex-table-cell" data-th="Location">
+                                <span class="content-shape loads w-80"></span>
+                            </div>
+                            <div class="flex-table-cell" data-th="Status">
+                                <span class="content-shape loads w-80"></span>
+                            </div>
+                            <div class="flex-table-cell cell-end" data-th="Actions">
+                                <span class="content-shape loads w-80"></span>
+                            </div>
+                        </div>
+        
+                        <!--Table item-->
+                        <div class="flex-table-item">
+                            <div class="flex-table-cell is-media is-grow">
+                                <div class="block is-44x44 is-circle no-m loads" alt=""></div>
+                                <div>
+                                    <span class="item-name dark-inverted">
+                                        <span class="content-shape loads title-shape"></span>
+                                    </span>
+                                    <span class="item-meta">
+                                        <span class="content-shape loads subtitle-shape"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex-table-cell" data-th="Department">
+                                <span class="content-shape loads w-80"></span>
+                            </div>
+                            <div class="flex-table-cell" data-th="Location">
+                                <span class="content-shape loads w-80"></span>
+                            </div>
+                            <div class="flex-table-cell" data-th="Status">
+                                <span class="content-shape loads w-80"></span>
+                            </div>
+                            <div class="flex-table-cell cell-end" data-th="Actions">
+                                <span class="content-shape loads w-80"></span>
+                            </div>
+                        </div>
+        
+                        <!--Table item-->
+                        <div class="flex-table-item">
+                            <div class="flex-table-cell is-media is-grow">
+                                <div class="block is-44x44 is-circle no-m loads" alt=""></div>
+                                <div>
+                                    <span class="item-name dark-inverted">
+                                        <span class="content-shape loads title-shape"></span>
+                                    </span>
+                                    <span class="item-meta">
+                                        <span class="content-shape loads subtitle-shape"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="flex-table-cell" data-th="Department">
+                                <span class="content-shape loads w-80"></span>
+                            </div>
+                            <div class="flex-table-cell" data-th="Location">
+                                <span class="content-shape loads w-80"></span>
+                            </div>
+                            <div class="flex-table-cell" data-th="Status">
+                                <span class="content-shape loads w-80"></span>
+                            </div>
+                            <div class="flex-table-cell cell-end" data-th="Actions">
+                                <span class="content-shape loads w-80"></span>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+                
+            </div>
+    
+        </div>
+    </div>
+
+    <footer class="footer footer-left">
+        <div class="container">
+            <div class="columns is-vcentered">
+                <div class="column is-8">
+                    <div class="is-flex d-column-mobile d-column-tablet-p is-align-items-center">
+                        <a class="footer-logo-left is-square" href="#">
+                            <img src="/img/logo/logo.svg" alt="">
+                        </a>
+                        <ul class="py-2">
+                            <li class="inline-block px-2">
+                                <a class="footer-link" href="employees.html">Explore</a>
+                            </li>
+                            <li class="inline-block px-2">
+                                <a href="https://cssninja.io/" class="footer-link">Help</a>
+                            </li>
+                            <li class="inline-block px-2">
+                                <a href="https://cssninja.io/contact" class="footer-link">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="column is-4 has-text-centered">
+                    <p class="subtitle footer-text medium:text-right is-6" data-config-id="copyright">© 2020-2021 CSS Ninja. All
+                        rights
+                        reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>    
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <script src="./js/bundle.js"></script>
+    
+</body>
+
+</html>

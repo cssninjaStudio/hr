@@ -1,0 +1,1687 @@
+{
+    "posts": [
+        {
+            "id": 0,
+            "image": "img/posts/1.jpg",
+            "title": "Reshaping Human Ressources",
+            "category": "News",
+            "author": "img/avatars/1.jpg",
+            "views": 832,
+            "comments": 27
+        },
+        {
+            "id": 1,
+            "image": "img/posts/2.jpg",
+            "title": "UX in HR management",
+            "category": "Research",
+            "author": "img/avatars/2.jpg",
+            "views": 741,
+            "comments": 12
+        },
+        {
+            "id": 1,
+            "image": "img/posts/3.jpg",
+            "title": "5 tips for optimal teamwork",
+            "category": "Business Tips",
+            "author": "img/avatars/4.jpg",
+            "views": 119,
+            "comments": 8
+        }
+    ],
+    "comments": [
+        {
+            "id": 1,
+            "body": "some comment",
+            "postId": 1
+        }
+    ],
+    "profile": {
+        "name": "typicode"
+    },
+    "employees": [
+        {
+            "id": 0,
+            "photo": "img/avatars/1.jpg",
+            "firstName": "Matt",
+            "lastName": "Williams",
+            "fullName": "Matt Williams",
+            "email": "mattwilliamns@hr.co",
+            "username": "matt",
+            "position": "UI/UX Designer",
+            "department": "Design",
+            "location": "San Diego, CA",
+            "status": "Available",
+            "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quare attende, quaeso. Hoc loco tenere se Triarius non potuit. Duo Reges: constructio interrete. Certe non potest. Non autem hoc: igitur ne illud quidem. Eam tum adesse, cum dolor omnis absit; Suo genere perveniant ad extremum; Ita credo. Duo Reges: constructio interrete. Nihil opus est exemplis hoc facere longius. Eam tum adesse, cum dolor omnis absit.",
+            "experience": 10,
+            "tasks": {
+                "completed": 263,
+                "pending": 78,
+                "onHold": 15
+            },
+            "skills": [
+                {
+                    "id": 0,
+                    "skillName": "Illustrator",
+                    "skillIcon": "/img/tools/illustrator.svg"
+                },
+                {
+                    "id": 1,
+                    "skillName": "Photoshop",
+                    "skillIcon": "/img/tools/photoshop.svg"
+                },
+                {
+                    "id": 2,
+                    "skillName": "Sketch",
+                    "skillIcon": "/img/tools/sketch.svg"
+                }
+            ],
+            "subskills": [
+                {
+                    "id": 0,
+                    "skillName": "English",
+                    "skillIcon": "/img/skills/english.svg"
+                },
+                {
+                    "id": 1,
+                    "skillName": "French",
+                    "skillIcon": "/img/skills/french.svg"
+                }
+            ],
+            "tools": [
+                {
+                    "id": 0,
+                    "toolName": "Slack",
+                    "toolIcon": "/img/tools/slack.svg"
+                },
+                {
+                    "id": 1,
+                    "toolName": "GitHub",
+                    "toolIcon": "/img/tools/github.svg"
+                },
+                {
+                    "id": 2,
+                    "toolName": "GitLab",
+                    "toolIcon": "/img/tools/gitlab.svg"
+                }
+            ],
+            "projects": [
+                {
+                    "id": 0,
+                    "title": "Go Messaging",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://cdn.dribbble.com/users/949297/screenshots/14369996/dribble_betacall__04_2x.png",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/21.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/14.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/4.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/7.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 1,
+                    "title": "Flax CRM",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://cdn.dribbble.com/users/949297/screenshots/11334964/dribble_betacrm__03_2x.png",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/19.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/23.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "Open Reader",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://cdn.dribbble.com/users/4916029/screenshots/10826251/project_shot_4x.png",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/17.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/25.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/18.jpg"
+                        }
+                    ]
+                }
+            ],
+            "jobs": [
+                {
+                    "position": "UI/UX Designer",
+                    "logo": "/img/companies/taiga.svg",
+                    "company": "Taiga",
+                    "type": "International",
+                    "timeline": "Jun 2020 - Present"
+                },
+                {
+                    "position": "UI/UX Designer",
+                    "logo": "/img/companies/github-icon.svg",
+                    "company": "GitHub ",
+                    "type": "International",
+                    "timeline": "Mar 2016 - May 2020"
+                }
+            ],
+            "education": [
+                {
+                    "name": "Master in Design and UX",
+                    "logo": "/img/schools/1.svg",
+                    "school": "EGE University",
+                    "type": "International",
+                    "timeline": "Sep 2014 - Jun 2016"
+                },
+                {
+                    "name": "Bachelor in Design and UX",
+                    "logo": "/img/schools/2.svg",
+                    "school": "Spax University",
+                    "type": "International",
+                    "timeline": "Sep 2010 - Jun 2013"
+                }
+            ],
+            "socialProfiles": [
+                {
+                    "channelName": "Facebook",
+                    "channelUrl": "https://facebook.com/user"
+                },
+                {
+                    "channelName": "Twitter",
+                    "channelUrl": "https://twitter.com/user"
+                },
+                {
+                    "channelName": "Dribbble",
+                    "channelUrl": "https://dribbble.com/user"
+                },
+                {
+                    "channelName": "Linkedin",
+                    "channelUrl": "https://linkedin.com/user"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "photo": "img/avatars/2.jpg",
+            "firstName": "Rhonda",
+            "lastName": "Jackson",
+            "fullName": "Rhonda Jackson",
+            "email": "rhonda@hr.co",
+            "username": "Rhonda",
+            "position": "Product Manager",
+            "department": "Product",
+            "location": "Las Vegas, NV",
+            "status": "Available",
+            "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quare attende, quaeso. Hoc loco tenere se Triarius non potuit. Duo Reges: constructio interrete. Certe non potest. Non autem hoc: igitur ne illud quidem. Eam tum adesse, cum dolor omnis absit; Suo genere perveniant ad extremum.",
+            "experience": 7,
+            "tasks": {
+                "completed": 263,
+                "pending": 78,
+                "onHold": 15
+            },
+            "skills": [
+                {
+                    "id": 0,
+                    "skillName": "Html5",
+                    "skillIcon": "/img/skills/html5.svg"
+                }
+            ],
+            "subskills": [
+                {
+                    "id": 0,
+                    "skillName": "English",
+                    "skillIcon": "/img/skills/english.svg"
+                },
+                {
+                    "id": 1,
+                    "skillName": "Spanish",
+                    "skillIcon": "/img/skills/spanish.svg"
+                }
+            ],
+            "tools": [
+                {
+                    "id": 0,
+                    "toolName": "MS Word",
+                    "toolIcon": "/img/tools/doc.svg"
+                },
+                {
+                    "id": 1,
+                    "toolName": "MS Excel",
+                    "toolIcon": "/img/tools/xls.svg"
+                },
+                {
+                    "id": 2,
+                    "toolName": "MS Powerpoint",
+                    "toolIcon": "/img/tools/ppt.svg"
+                }
+            ],
+            "projects": [
+                {
+                    "id": 0,
+                    "title": "Vuesician",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://cdn.dribbble.com/users/3681220/screenshots/6955747/vinyl-dribbble-2_2x.jpg",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/25.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/18.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/27.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 1,
+                    "title": "Designator",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://cdn.dribbble.com/users/366569/screenshots/4784220/lp-ebook-dribbble.png",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/19.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/11.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "Product Race",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://i.pinimg.com/originals/f7/09/a0/f709a0914b2c0c0accfd8697d8531c32.png",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/16.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/21.jpg"
+                        }
+                    ]
+                }
+            ],
+            "jobs": [
+                {
+                    "position": "Support Officer",
+                    "logo": "/img/companies/atlassian.svg",
+                    "company": "Atlassian",
+                    "type": "Remote",
+                    "timeline": "Jun 2020 - Dec 2020"
+                },
+                {
+                    "position": "Support Officer",
+                    "logo": "/img/companies/airbnb.svg",
+                    "company": "Airbnb ",
+                    "type": "Remote",
+                    "timeline": "Apr 2016 - May 2020"
+                }
+            ],
+            "education": [
+                {
+                    "name": "QA Engineer Master",
+                    "logo": "/img/schools/3.svg",
+                    "school": "RMIT University",
+                    "type": "International",
+                    "timeline": "Sep 2014 - Jun 2016"
+                },
+                {
+                    "name": "QA Engineer Bachelor",
+                    "logo": "/img/schools/3.svg",
+                    "school": "RMIT University",
+                    "type": "International",
+                    "timeline": "Sep 2010 - Jun 2013"
+                }
+            ],
+            "socialProfiles": [
+                {
+                    "id": 0,
+                    "channelName": "Facebook",
+                    "channelUrl": "https://facebook.com/user"
+                },
+                {
+                    "id": 1,
+                    "channelName": "Twitter",
+                    "channelUrl": "https://twitter.com/user"
+                },
+                {
+                    "id": 2,
+                    "channelName": "Linkedin",
+                    "channelUrl": "https://linkedin.com/user"
+                },
+                {
+                    "id": 3,
+                    "channelName": "GitHub",
+                    "channelUrl": "https://github.com/user"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "photo": "img/avatars/3.jpeg",
+            "firstName": "Emily",
+            "lastName": "Cheng",
+            "fullName": "Emily Cheng",
+            "email": "emily@hr.co",
+            "username": "Emily",
+            "position": "Frontend Developer",
+            "department": "Marketing",
+            "location": "London, UK",
+            "status": "Away",
+            "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quare attende, quaeso. Hoc loco tenere se Triarius non potuit. Duo Reges: constructio interrete. Certe non potest. Non autem hoc: igitur ne illud quidem. Eam tum adesse, cum dolor omnis absit; Suo genere perveniant ad extremum; Ita credo. Duo Reges: constructio interrete.",
+            "experience": 10,
+            "tasks": {
+                "completed": 263,
+                "pending": 78,
+                "onHold": 15
+            },
+            "skills": [
+                {
+                    "id": 0,
+                    "skillName": "ReactJS",
+                    "skillIcon": "/img/skills/reactjs.svg"
+                },
+                {
+                    "id": 1,
+                    "skillName": "VueJS",
+                    "skillIcon": "/img/skills/vuejs.svg"
+                },
+                {
+                    "id": 2,
+                    "skillName": "Javascript",
+                    "skillIcon": "/img/skills/js.svg"
+                }
+            ],
+            "subskills": [
+                {
+                    "id": 0,
+                    "skillName": "English",
+                    "skillIcon": "/img/skills/english.svg"
+                },
+                {
+                    "id": 1,
+                    "skillName": "C#",
+                    "skillIcon": "/img/skills/csharp.svg"
+                }
+            ],
+            "tools": [
+                {
+                    "id": 0,
+                    "toolName": "Illustrator",
+                    "toolIcon": "/img/tools/illustrator.svg"
+                },
+                {
+                    "id": 1,
+                    "toolName": "MS Powerpoint",
+                    "toolIcon": "/img/tools/ppt.svg"
+                }
+            ],
+            "projects": [
+                {
+                    "id": 0,
+                    "title": "Projectify",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://i.pinimg.com/originals/bc/13/ae/bc13aeda287f8b812ee4b48c64209ae4.png",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/21.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/14.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 1,
+                    "title": "V-Office",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://assets.materialup.com/uploads/9769c42c-d1e8-417e-8591-6ee13d4ce655/preview.png",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/19.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/23.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/4.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/7.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "Quinlex",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://assets.materialup.com/uploads/ce0302b9-60bd-45b8-93b1-c78b6f898a75/preview.jpg",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/25.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/18.jpg"
+                        }
+                    ]
+                }
+            ],
+            "jobs": [
+                {
+                    "position": "Senior Frontend Developer",
+                    "logo": "/img/companies/google.svg",
+                    "company": "Google",
+                    "type": "Remote",
+                    "timeline": "Jun 2020 - Present"
+                },
+                {
+                    "position": "Junior Frontend Developer",
+                    "logo": "/img/companies/google.svg",
+                    "company": "Google ",
+                    "type": "Remote",
+                    "timeline": "Mar 2016 - May 2020"
+                }
+            ],
+            "education": [
+                {
+                    "name": "Master in Software Engineering",
+                    "logo": "/img/schools/3.svg",
+                    "school": "RMIT University",
+                    "type": "International",
+                    "timeline": "Sep 2014 - Jun 2016"
+                },
+                {
+                    "name": "Bachelor in Software Engineering",
+                    "logo": "/img/schools/2.svg",
+                    "school": "Spax University",
+                    "type": "International",
+                    "timeline": "Sep 2010 - Jun 2013"
+                }
+            ],
+            "socialProfiles": [
+                {
+                    "id": 0,
+                    "channelName": "Facebook",
+                    "channelUrl": "https://facebook.com/user"
+                },
+                {
+                    "id": 1,
+                    "channelName": "Twitter",
+                    "channelUrl": "https://twitter.com/user"
+                },
+                {
+                    "id": 2,
+                    "channelName": "GitHub",
+                    "channelUrl": "https://github.com/user"
+                },
+                {
+                    "id": 3,
+                    "channelName": "Linkedin",
+                    "channelUrl": "https://linkedin.com/user"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "photo": "img/avatars/4.jpg",
+            "firstName": "Mike",
+            "lastName": "Wallace",
+            "fullName": "Mike Wallace",
+            "email": "mike@hr.co",
+            "username": "Mike",
+            "position": "Backend Developer",
+            "department": "IT Dep",
+            "location": "San Diego, CA",
+            "status": "Available",
+            "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quare attende, quaeso. Hoc loco tenere se Triarius non potuit. Duo Reges: constructio interrete. Certe non potest. Non autem hoc: igitur ne illud quidem. Eam tum adesse, cum dolor omnis absit; Suo genere perveniant ad extremum; Ita credo. Duo Reges: constructio interrete. Nihil opus est exemplis hoc facere longius.",
+            "experience": 10,
+            "tasks": {
+                "completed": 263,
+                "pending": 78,
+                "onHold": 15
+            },
+            "skills": [
+                {
+                    "id": 0,
+                    "skillName": "C#",
+                    "skillIcon": "/img/skills/csharp.svg"
+                },
+                {
+                    "id": 1,
+                    "skillName": "NodeJS",
+                    "skillIcon": "/img/skills/nodejs.svg"
+                },
+                {
+                    "id": 2,
+                    "skillName": "PhP",
+                    "skillIcon": "/img/skills/php.svg"
+                }
+            ],
+            "subskills": [
+                {
+                    "id": 0,
+                    "skillName": "Android",
+                    "skillIcon": "/img/skills/android.svg"
+                },
+                {
+                    "id": 1,
+                    "skillName": "Swift",
+                    "skillIcon": "/img/skills/swift.svg"
+                }
+            ],
+            "tools": [
+                {
+                    "id": 1,
+                    "toolName": "Photoshop",
+                    "toolIcon": "/img/tools/photoshop.svg"
+                },
+                {
+                    "id": 2,
+                    "toolName": "MS Word",
+                    "toolIcon": "/img/tools/doc.svg"
+                }
+            ],
+            "projects": [
+                {
+                    "id": 0,
+                    "title": "Trendster",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://maxcdn.icons8.com/app/uploads/2019/08/mobile-ui-design.png",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/1.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/14.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/21.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 1,
+                    "title": "Dancer Spot",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://cdn.dribbble.com/users/2521279/screenshots/5348161/dribble_2x.jpg",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/22.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/19.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/24.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "Business Boy",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://i.pinimg.com/originals/05/44/49/054449398671545c1712ff9e4874d31c.jpg",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/17.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/25.jpg"
+                        }
+                    ]
+                }
+            ],
+            "jobs": [
+                {
+                    "position": "Backend Developer",
+                    "logo": "/img/companies/dribbble.svg",
+                    "company": "Dribbble",
+                    "type": "International",
+                    "timeline": "Jun 2020 - Present"
+                },
+                {
+                    "position": "Backend Developer",
+                    "logo": "/img/companies/slack.svg",
+                    "company": "Slack ",
+                    "type": "International",
+                    "timeline": "Mar 2016 - May 2020"
+                }
+            ],
+            "education": [
+                {
+                    "name": "Master in Software Engineering",
+                    "logo": "/img/schools/5.svg",
+                    "school": "Chalmers University",
+                    "type": "International",
+                    "timeline": "Sep 2014 - Jun 2016"
+                },
+                {
+                    "name": "Bachelor in Software Engineering",
+                    "logo": "/img/schools/5.svg",
+                    "school": "Chalmers University",
+                    "type": "International",
+                    "timeline": "Sep 2010 - Jun 2013"
+                }
+            ],
+            "socialProfiles": [
+                {
+                    "id": 0,
+                    "channelName": "Facebook",
+                    "channelUrl": "https://facebook.com/user"
+                },
+                {
+                    "id": 1,
+                    "channelName": "Twitter",
+                    "channelUrl": "https://twitter.com/user"
+                },
+                {
+                    "id": 2,
+                    "channelName": "Linkedin",
+                    "channelUrl": "https://linkedin.com/user"
+                },
+                {
+                    "id": 3,
+                    "channelName": "GitHub",
+                    "channelUrl": "https://github.com/user"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "photo": "img/avatars/13.jpg",
+            "firstName": "Anton",
+            "lastName": "Jimenez",
+            "fullName": "Anton Jimenez",
+            "email": "anton@hr.co",
+            "username": "Anton",
+            "position": "Fullstack Developer",
+            "department": "IT Dep",
+            "location": "Paris, France",
+            "status": "Busy",
+            "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quare attende, quaeso. Hoc loco tenere se Triarius non potuit. Duo Reges: constructio interrete. Certe non potest. Non autem hoc: igitur ne illud quidem. Eam tum adesse, cum dolor omnis absit; Suo genere perveniant ad extremum; Ita credo. Duo Reges: constructio interrete. Nihil opus est exemplis hoc facere longius.",
+            "experience": 10,
+            "tasks": {
+                "completed": 263,
+                "pending": 78,
+                "onHold": 15
+            },
+            "skills": [
+                {
+                    "id": 0,
+                    "skillName": "VueJS",
+                    "skillIcon": "/img/skills/vuejs.svg"
+                },
+                {
+                    "id": 1,
+                    "skillName": "C#",
+                    "skillIcon": "/img/skills/csharp.svg"
+                },
+                {
+                    "id": 2,
+                    "skillName": "Sass",
+                    "skillIcon": "/img/skills/sass.svg"
+                }
+            ],
+            "subskills": [
+                {
+                    "id": 0,
+                    "skillName": "ReactJS",
+                    "skillIcon": "/img/skills/reactjs.svg"
+                },
+                {
+                    "id": 1,
+                    "skillName": "French",
+                    "skillIcon": "/img/skills/french.svg"
+                }
+            ],
+            "tools": [
+                {
+                    "id": 0,
+                    "toolName": "MS Word",
+                    "toolIcon": "/img/tools/doc.svg"
+                },
+                {
+                    "id": 1,
+                    "toolName": "MS Excel",
+                    "toolIcon": "/img/tools/xls.svg"
+                }
+            ],
+            "projects": [
+                {
+                    "id": 0,
+                    "title": "Newsbunch",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://i.pinimg.com/originals/22/7c/71/227c71538e866b07e6979263889a7c15.png",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/15.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/17.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 1,
+                    "title": "Estate Pro",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://cdn.dribbble.com/users/3347859/screenshots/11645777/aualily_landingpagedesign_behance_dribble_2x.png",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/26.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/18.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/21.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "Citrix",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://cdn.dribbble.com/users/3278186/screenshots/13995027/softhub-_dribble_2x.png",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/12.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/7.jpg"
+                        }
+                    ]
+                }
+            ],
+            "jobs": [
+                {
+                    "position": "Fullstack Developer",
+                    "logo": "/img/companies/google.svg",
+                    "company": "Google",
+                    "type": "Remote",
+                    "timeline": "Jun 2020 - Present"
+                },
+                {
+                    "position": "Frontend Developer",
+                    "logo": "/img/companies/gitlab.svg",
+                    "company": "GitLab ",
+                    "type": "Remote",
+                    "timeline": "Mar 2016 - May 2020"
+                }
+            ],
+            "education": [
+                {
+                    "name": "Master in Design and UX",
+                    "logo": "/img/schools/3.svg",
+                    "school": "RMIT University",
+                    "type": "International",
+                    "timeline": "Sep 2014 - Jun 2016"
+                },
+                {
+                    "name": "Bachelor in Design and UX",
+                    "logo": "/img/schools/3.svg",
+                    "school": "RMIT University",
+                    "type": "International",
+                    "timeline": "Sep 2010 - Jun 2013"
+                }
+            ],
+            "socialProfiles": [
+                {
+                    "id": 0,
+                    "channelName": "Facebook",
+                    "channelUrl": "https://facebook.com/user"
+                },
+                {
+                    "id": 1,
+                    "channelName": "Twitter",
+                    "channelUrl": "https://twitter.com/user"
+                },
+                {
+                    "id": 2,
+                    "channelName": "GitHub",
+                    "channelUrl": "https://github.com/user"
+                },
+                {
+                    "id": 3,
+                    "channelName": "Linkedin",
+                    "channelUrl": "https://linkedin.com/user"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "photo": "img/avatars/19.jpg",
+            "firstName": "Adam",
+            "lastName": "Felk",
+            "fullName": "Adam Felk",
+            "email": "adam@hr.co",
+            "username": "Adam",
+            "position": "Business Analyst",
+            "department": "Business",
+            "location": "London, UK",
+            "status": "Away",
+            "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quare attende, quaeso. Hoc loco tenere se Triarius non potuit. Duo Reges: constructio interrete. Certe non potest. Non autem hoc: igitur ne illud quidem. Eam tum adesse, cum dolor omnis absit; Suo genere perveniant ad extremum; Ita credo. Duo Reges: constructio interrete. Nihil opus est exemplis hoc facere longius.",
+            "experience": 10,
+            "tasks": {
+                "completed": 263,
+                "pending": 78,
+                "onHold": 15
+            },
+            "skills": [
+                {
+                    "id": 0,
+                    "skillName": "Alfresco",
+                    "skillIcon": "/img/tools/alfresco.svg"
+                },
+                {
+                    "id": 1,
+                    "skillName": "Monday",
+                    "skillIcon": "/img/tools/monday.svg"
+                }
+            ],
+            "subskills": [
+                {
+                    "id": 0,
+                    "skillName": "English",
+                    "skillIcon": "/img/skills/english.svg"
+                },
+                {
+                    "id": 1,
+                    "skillName": "French",
+                    "skillIcon": "/img/skills/french.svg"
+                },
+                {
+                    "id": 1,
+                    "skillName": "Spanish",
+                    "skillIcon": "/img/skills/spanish.svg"
+                }
+            ],
+            "tools": [
+                {
+                    "id": 0,
+                    "toolName": "MS Word",
+                    "toolIcon": "/img/tools/doc.svg"
+                },
+                {
+                    "id": 1,
+                    "toolName": "MS Excel",
+                    "toolIcon": "/img/tools/xls.svg"
+                },
+                {
+                    "id": 2,
+                    "toolName": "MS Powerpoint",
+                    "toolIcon": "/img/tools/ppt.svg"
+                }
+            ],
+            "projects": [
+                {
+                    "id": 0,
+                    "title": "Cyber Protect",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://cdn.dribbble.com/users/25514/screenshots/9834148/dribbble_1600x1200__1__2x.png",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/18.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/16.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/11.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 1,
+                    "title": "Better Jobs",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://cdn.dribbble.com/users/742735/screenshots/3447513/better-job-dribble-800x600.jpg?compress=1&resize=400x300",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/12.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/15.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "Net Mentor",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://cdn.dribbble.com/users/778637/screenshots/4901142/looped_landing.gif",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/17.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/25.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/18.jpg"
+                        }
+                    ]
+                }
+            ],
+            "jobs": [
+                {
+                    "position": "Senior Analyst",
+                    "logo": "/img/tools/alfresco.svg",
+                    "company": "Taiga",
+                    "type": "International",
+                    "timeline": "Jun 2020 - Present"
+                },
+                {
+                    "position": "Senior Analyst",
+                    "logo": "/img/companies/google.svg",
+                    "company": "Google",
+                    "type": "International",
+                    "timeline": "Jun 2018 - Mar 2020"
+                },
+                {
+                    "position": "Junior Analyst",
+                    "logo": "/img/companies/atlassian.svg",
+                    "company": "Atlassian ",
+                    "type": "International",
+                    "timeline": "Mar 2014 - May 2018"
+                }
+            ],
+            "education": [
+                {
+                    "name": "Master in BA",
+                    "logo": "/img/schools/6.svg",
+                    "school": "Pittsburg University",
+                    "type": "International",
+                    "timeline": "Sep 2014 - Jun 2016"
+                },
+                {
+                    "name": "Bachelor in BA",
+                    "logo": "/img/schools/6.svg",
+                    "school": "Pittsburg University",
+                    "type": "International",
+                    "timeline": "Sep 2010 - Jun 2013"
+                }
+            ],
+            "socialProfiles": [
+                {
+                    "id": 0,
+                    "channelName": "Facebook",
+                    "channelUrl": "https://facebook.com/user"
+                },
+                {
+                    "id": 1,
+                    "channelName": "Twitter",
+                    "channelUrl": "https://twitter.com/user"
+                },
+                {
+                    "id": 2,
+                    "channelName": "Linkedin",
+                    "channelUrl": "https://linkedin.com/user"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "photo": "img/avatars/7.jpg",
+            "firstName": "John",
+            "lastName": "Baxter",
+            "fullName": "John Baxter",
+            "email": "john@hr.co",
+            "username": "John",
+            "position": "Solution Architect",
+            "department": "IT Dep",
+            "location": "Melbourne, AU",
+            "status": "Available",
+            "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quare attende, quaeso. Hoc loco tenere se Triarius non potuit. Duo Reges: constructio interrete. Certe non potest. Non autem hoc: igitur ne illud quidem. Eam tum adesse, cum dolor omnis absit; Suo genere perveniant ad extremum; Ita credo. Duo Reges: constructio interrete. Nihil opus est exemplis hoc facere longius.",
+            "experience": 10,
+            "tasks": {
+                "completed": 263,
+                "pending": 78,
+                "onHold": 15
+            },
+            "skills": [
+                {
+                    "id": 0,
+                    "skillName": "C#",
+                    "skillIcon": "/img/skills/csharp.svg"
+                },
+                {
+                    "id": 1,
+                    "skillName": "PhP",
+                    "skillIcon": "/img/skills/php.svg"
+                },
+                {
+                    "id": 2,
+                    "skillName": "Laravel",
+                    "skillIcon": "/img/skills/laravel.svg"
+                }
+            ],
+            "subskills": [
+                {
+                    "id": 0,
+                    "skillName": "NodeJS",
+                    "skillIcon": "/img/skills/nodejs.svg"
+                },
+                {
+                    "id": 1,
+                    "skillName": "VueJS",
+                    "skillIcon": "/img/skills/vuejs.svg"
+                },
+                {
+                    "id": 2,
+                    "skillName": "English",
+                    "skillIcon": "/img/skills/english.svg"
+                }
+            ],
+            "tools": [
+                {
+                    "id": 0,
+                    "toolName": "MS Word",
+                    "toolIcon": "/img/tools/doc.svg"
+                },
+                {
+                    "id": 1,
+                    "toolName": "MS Powerpoint",
+                    "toolIcon": "/img/tools/ppt.svg"
+                },
+                {
+                    "id": 2,
+                    "toolName": "Sketch",
+                    "toolIcon": "/img/tools/sketch.svg"
+                }
+            ],
+            "projects": [
+                {
+                    "id": 0,
+                    "title": "Bankrupt",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://i.pinimg.com/originals/ae/97/52/ae9752fdbcc2e7641c47957c6c007403.jpg",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/16.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/11.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/24.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 1,
+                    "title": "UI Sumo",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://cdn.dribbble.com/users/692322/screenshots/3482119/dribbble-uisumo.png",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/23.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/27.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/26.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "LocBot",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://cdn.dribbble.com/users/2189866/screenshots/10859943/prancheta___1_2x.png",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/18.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/4.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/11.jpg"
+                        }
+                    ]
+                }
+            ],
+            "jobs": [
+                {
+                    "position": "Solution Architect",
+                    "logo": "/img/companies/taiga.svg",
+                    "company": "Taiga",
+                    "type": "Remote",
+                    "timeline": "Jun 2020 - Present"
+                },
+                {
+                    "position": "Solution Architect",
+                    "logo": "/img/companies/google.svg",
+                    "company": "Google ",
+                    "type": "Remote",
+                    "timeline": "Mar 2016 - May 2020"
+                }
+            ],
+            "education": [
+                {
+                    "name": "Master in Software Engineering",
+                    "logo": "/img/schools/3.svg",
+                    "school": "RMIT University",
+                    "type": "International",
+                    "timeline": "Sep 2014 - Jun 2016"
+                },
+                {
+                    "name": "Bachelor in Software Engineering",
+                    "logo": "/img/schools/2.svg",
+                    "school": "Spax University",
+                    "type": "International",
+                    "timeline": "Sep 2010 - Jun 2013"
+                }
+            ],
+            "socialProfiles": [
+                {
+                    "id": 0,
+                    "channelName": "Facebook",
+                    "channelUrl": "https://facebook.com/user"
+                },
+                {
+                    "id": 1,
+                    "channelName": "Twitter",
+                    "channelUrl": "https://twitter.com/user"
+                },
+                {
+                    "id": 2,
+                    "channelName": "Linkedin",
+                    "channelUrl": "https://linkedin.com/user"
+                },
+                {
+                    "id": 3,
+                    "channelName": "GitHub",
+                    "channelUrl": "https://github.com/user"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "photo": "img/avatars/22.jpg",
+            "firstName": "Houssam",
+            "lastName": "Nasri",
+            "fullName": "Houssam Nasri",
+            "email": "houssam@hr.co",
+            "username": "Houssam",
+            "position": "Accountant",
+            "department": "Finance",
+            "location": "Berlin, GE",
+            "status": "Away",
+            "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quare attende, quaeso. Hoc loco tenere se Triarius non potuit. Duo Reges: constructio interrete. Certe non potest. Non autem hoc: igitur ne illud quidem. Eam tum adesse, cum dolor omnis absit; Suo genere perveniant ad extremum; Ita credo. Duo Reges: constructio interrete. Nihil opus est exemplis hoc facere longius.",
+            "experience": 10,
+            "tasks": {
+                "completed": 263,
+                "pending": 78,
+                "onHold": 15
+            },
+            "skills": [
+                {
+                    "id": 0,
+                    "skillName": "Quickbooks",
+                    "skillIcon": "/img/tools/quickbooks.svg"
+                },
+                {
+                    "id": 1,
+                    "skillName": "Freshbooks",
+                    "skillIcon": "/img/tools/freshbooks.svg"
+                }
+            ],
+            "subskills": [
+                {
+                    "id": 0,
+                    "skillName": "English",
+                    "skillIcon": "/img/skills/english.svg"
+                },
+                {
+                    "id": 1,
+                    "skillName": "German",
+                    "skillIcon": "/img/skills/german.svg"
+                }
+            ],
+            "tools": [
+                {
+                    "id": 0,
+                    "toolName": "MS Word",
+                    "toolIcon": "/img/tools/doc.svg"
+                },
+                {
+                    "id": 1,
+                    "toolName": "MS Excel",
+                    "toolIcon": "/img/tools/xls.svg"
+                },
+                {
+                    "id": 2,
+                    "toolName": "MS Powerpoint",
+                    "toolIcon": "/img/tools/ppt.svg"
+                }
+            ],
+            "projects": [
+                {
+                    "id": 0,
+                    "title": "My Account",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://cdn.dribbble.com/users/418910/screenshots/14151287/media/36e17968ffeb0dff0c6a49fcd1ebe413.png?compress=1&resize=400x300",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/2.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/26.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 1,
+                    "title": "Bank Boy",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://i.pinimg.com/originals/12/8b/df/128bdf82cd1ca06126b60159860120af.png",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/25.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/16.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "Finpay",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://cdn.dribbble.com/users/247394/screenshots/12511007/dribbble_shot_4x.png",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/19.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/14.jpg"
+                        }
+                    ]
+                }
+            ],
+            "jobs": [
+                {
+                    "position": "Senior Accountant",
+                    "logo": "/img/companies/airbnb.svg",
+                    "company": "Airbnb",
+                    "type": "International",
+                    "timeline": "Jun 2020 - Present"
+                },
+                {
+                    "position": "Junior Accountant",
+                    "logo": "/img/companies/airbnb.svg",
+                    "company": "Airbnb ",
+                    "type": "International",
+                    "timeline": "Mar 2016 - May 2020"
+                }
+            ],
+            "education": [
+                {
+                    "name": "Master in BA",
+                    "logo": "/img/schools/6.svg",
+                    "school": "Pittsburg University",
+                    "type": "International",
+                    "timeline": "Sep 2014 - Jun 2016"
+                },
+                {
+                    "name": "Bachelor in BA",
+                    "logo": "/img/schools/6.svg",
+                    "school": "Pittsburg University",
+                    "type": "International",
+                    "timeline": "Sep 2010 - Jun 2013"
+                }
+            ],
+            "socialProfiles": [
+                {
+                    "id": 0,
+                    "channelName": "Facebook",
+                    "channelUrl": "https://facebook.com/user"
+                },
+                {
+                    "id": 1,
+                    "channelName": "Twitter",
+                    "channelUrl": "https://twitter.com/user"
+                },
+                {
+                    "id": 2,
+                    "channelName": "Linkedin",
+                    "channelUrl": "https://linkedin.com/user"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "photo": "img/avatars/14.jpg",
+            "firstName": "Miranda",
+            "lastName": "Smith",
+            "fullName": "Miranda Smith",
+            "email": "miranda@hr.co",
+            "username": "Miranda",
+            "position": "Marketing Associate",
+            "department": "Marketing",
+            "location": "Los Angeles, CA",
+            "status": "Available",
+            "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quare attende, quaeso. Hoc loco tenere se Triarius non potuit. Duo Reges: constructio interrete. Certe non potest. Non autem hoc: igitur ne illud quidem. Eam tum adesse, cum dolor omnis absit; Suo genere perveniant ad extremum; Ita credo. Duo Reges: constructio interrete. Nihil opus est exemplis hoc facere longius.",
+            "experience": 10,
+            "tasks": {
+                "completed": 263,
+                "pending": 78,
+                "onHold": 15
+            },
+            "skills": [
+                {
+                    "id": 0,
+                    "skillName": "Illustrator",
+                    "skillIcon": "/img/tools/illustrator.svg"
+                },
+                {
+                    "id": 2,
+                    "skillName": "Sketch",
+                    "skillIcon": "/img/tools/sketch.svg"
+                }
+            ],
+            "subskills": [
+                {
+                    "id": 0,
+                    "skillName": "English",
+                    "skillIcon": "/img/skills/english.svg"
+                },
+                {
+                    "id": 1,
+                    "skillName": "Spanish",
+                    "skillIcon": "/img/skills/spanish.svg"
+                }
+            ],
+            "tools": [
+                {
+                    "id": 0,
+                    "toolName": "MS Word",
+                    "toolIcon": "/img/tools/doc.svg"
+                },
+                {
+                    "id": 1,
+                    "toolName": "MS Powerpoint",
+                    "toolIcon": "/img/tools/ppt.svg"
+                }
+            ],
+            "projects": [
+                {
+                    "id": 0,
+                    "title": "Lander.io",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://i.pinimg.com/originals/cf/54/ff/cf54ff3fe4ffb45cc46834f315b4477f.png",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/21.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/4.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/7.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 1,
+                    "title": "Evocative",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://cdn.dribbble.com/users/1483413/screenshots/10065263/evoke-dribble_4x.png",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/19.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/23.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "Task Heaven",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://i.pinimg.com/originals/71/2a/c5/712ac596f9befd295de1a8380c92b2aa.png",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/17.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/25.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/18.jpg"
+                        }
+                    ]
+                }
+            ],
+            "jobs": [
+                {
+                    "position": "Marketing Associate",
+                    "logo": "/img/companies/airbnb.svg",
+                    "company": "Airbnb",
+                    "type": "International",
+                    "timeline": "Jun 2020 - Present"
+                },
+                {
+                    "position": "UI/UX Designer",
+                    "logo": "/img/companies/google.svg",
+                    "company": "Google ",
+                    "type": "International",
+                    "timeline": "Mar 2016 - May 2020"
+                }
+            ],
+            "education": [
+                {
+                    "name": "Master in Design and UX",
+                    "logo": "/img/schools/1.svg",
+                    "school": "EGE University",
+                    "type": "International",
+                    "timeline": "Sep 2014 - Jun 2016"
+                },
+                {
+                    "name": "Bachelor in Design and UX",
+                    "logo": "/img/schools/2.svg",
+                    "school": "Spax University",
+                    "type": "International",
+                    "timeline": "Sep 2010 - Jun 2013"
+                }
+            ],
+            "socialProfiles": [
+                {
+                    "id": 0,
+                    "channelName": "Facebook",
+                    "channelUrl": "https://facebook.com/user"
+                },
+                {
+                    "id": 1,
+                    "channelName": "Twitter",
+                    "channelUrl": "https://twitter.com/user"
+                },
+                {
+                    "id": 2,
+                    "channelName": "Linkedin",
+                    "channelUrl": "https://linkedin.com/user"
+                },
+                {
+                    "id": 3,
+                    "channelName": "Dribbble",
+                    "channelUrl": "https://dribbble.com/user"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "photo": "img/avatars/16.jpg",
+            "firstName": "Mark",
+            "lastName": "Greenberg",
+            "fullName": "Mark Greenberg",
+            "email": "mark@hr.co",
+            "username": "Mark",
+            "position": "Team Manager",
+            "department": "IT Dep",
+            "location": "San Francisco, CA",
+            "status": "Available",
+            "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quare attende, quaeso. Hoc loco tenere se Triarius non potuit. Duo Reges: constructio interrete. Certe non potest. Non autem hoc: igitur ne illud quidem. Eam tum adesse, cum dolor omnis absit; Suo genere perveniant ad extremum; Ita credo. Duo Reges: constructio interrete. Nihil opus est exemplis hoc facere longius.",
+            "experience": 10,
+            "tasks": {
+                "completed": 263,
+                "pending": 78,
+                "onHold": 15
+            },
+            "skills": [
+                {
+                    "id": 0,
+                    "skillName": "C#",
+                    "skillIcon": "/img/skills/csharp.svg"
+                },
+                {
+                    "id": 1,
+                    "skillName": "Javascript",
+                    "skillIcon": "/img/skills/js.svg"
+                },
+                {
+                    "id": 2,
+                    "skillName": "CSS3",
+                    "skillIcon": "/img/skills/css3.svg"
+                }
+            ],
+            "subskills": [
+                {
+                    "id": 0,
+                    "skillName": "Html5",
+                    "skillIcon": "/img/skills/html5.svg"
+                },
+                {
+                    "id": 1,
+                    "skillName": "Sass",
+                    "skillIcon": "/img/skills/sass.svg"
+                }
+            ],
+            "tools": [
+                {
+                    "id": 1,
+                    "toolName": "Taiga",
+                    "toolIcon": "/img/companies/taiga.svg"
+                },
+                {
+                    "id": 2,
+                    "toolName": "Sketch",
+                    "toolIcon": "/img/tools/sketch.svg"
+                }
+            ],
+            "projects": [
+                {
+                    "id": 0,
+                    "title": "Search Hub",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://i.pinimg.com/originals/52/15/64/521564a26ea8a0931f27799f88c607e3.png",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/1.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/11.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/14.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 1,
+                    "title": "Open Panel",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://cdn.dribbble.com/users/1430543/screenshots/13871968/light__1__4x.png",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/18.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/22.jpg"
+                        }
+                    ]
+                },
+                {
+                    "id": 2,
+                    "title": "Fitty",
+                    "subtitle": "Some nice project subtitle",
+                    "image": "https://cdn.dribbble.com/users/3604170/screenshots/13012281/dribbble_4x.png",
+                    "members": [
+                        {
+                            "photo": "/img/avatars/24.jpg"
+                        },
+                        {
+                            "photo": "/img/avatars/21.jpg"
+                        }
+                    ]
+                }
+            ],
+            "jobs": [
+                {
+                    "position": "Team Manager",
+                    "logo": "/img/companies/atlassian.svg",
+                    "company": "Atlassian",
+                    "type": "International",
+                    "timeline": "Jun 2020 - Present"
+                },
+                {
+                    "position": "Backend Developer",
+                    "logo": "/img/companies/atlassian.svg",
+                    "company": "Atlassian ",
+                    "type": "International",
+                    "timeline": "Mar 2016 - May 2020"
+                }
+            ],
+            "education": [
+                {
+                    "name": "Master in Software Engineering",
+                    "logo": "/img/schools/3.svg",
+                    "school": "RMIT University",
+                    "type": "International",
+                    "timeline": "Sep 2014 - Jun 2016"
+                },
+                {
+                    "name": "Bachelor in Software Engineering",
+                    "logo": "/img/schools/2.svg",
+                    "school": "Spax University",
+                    "type": "International",
+                    "timeline": "Sep 2010 - Jun 2013"
+                }
+            ],
+            "socialProfiles": [
+                {
+                    "id": 0,
+                    "channelName": "Facebook",
+                    "channelUrl": "https://facebook.com/user"
+                },
+                {
+                    "id": 1,
+                    "channelName": "Twitter",
+                    "channelUrl": "https://twitter.com/user"
+                },
+                {
+                    "id": 2,
+                    "channelName": "Linkedin",
+                    "channelUrl": "https://linkedin.com/user"
+                },
+                {
+                    "id": 3,
+                    "channelName": "GitHub",
+                    "channelUrl": "https://github.com/user"
+                }
+            ]
+        }
+    ]
+}

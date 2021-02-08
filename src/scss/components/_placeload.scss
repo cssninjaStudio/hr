@@ -1,0 +1,159 @@
+/*! _placeload.scss | HR | Css ninja 2020-2021 */
+
+/* ==========================================================================
+Loader
+========================================================================== */
+
+$background: #f6f7f8;
+$grey-nuance-lighter: #eeeeee;
+$grey-nuance-darker: #dddddd;
+$lighter-grey: #e8e8e8;
+
+.content-shape {
+  height: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 2px;
+
+  &.w-80 {
+    max-width: 80%;
+  }
+
+  &.w-60 {
+    max-width: 60%;
+  }
+
+  &.w-40 {
+    max-width: 40%;
+  }
+
+  &.w-20 {
+    max-width: 20%;
+  }
+}
+
+//Loading animation
+.loads {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-name: placeload;
+  animation-name: placeload;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  background: $background;
+  background: $grey-nuance-lighter;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(8%, $grey-nuance-lighter),
+    color-stop(18%, $grey-nuance-darker),
+    color-stop(33%, $grey-nuance-lighter)
+  );
+  background: -webkit-linear-gradient(
+    left,
+    #eeeeee 8%,
+    #dddddd 18%,
+    #eeeeee 33%
+  );
+  background: linear-gradient(
+    to right,
+    $grey-nuance-lighter 8%,
+    $grey-nuance-darker 18%,
+    $grey-nuance-lighter 33%
+  );
+  -webkit-background-size: 800px 104px;
+  background-size: 1200px 104px;
+  position: relative;
+}
+
+//Keyframes
+@-webkit-keyframes placeload {
+  0% {
+    background-position: -468px 0;
+  }
+
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+@keyframes placeload {
+  0% {
+    background-position: -468px 0;
+  }
+
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+/* ==========================================================================
+Page placeholder
+========================================================================== */
+
+.page-placeholder {
+  min-height: 400px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  &.is-wider {
+    .placeholder-content {
+      > p {
+        font-size: 1rem;
+        max-width: 420px;
+      }
+    }
+  }
+
+  .placeholder-content {
+    text-align: center;
+
+    img {
+      display: block;
+      max-width: 340px;
+      margin: 0 auto 12px auto;
+    }
+
+    h3 {
+      font-family: $font-alt;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: $dark-text;
+    }
+
+    p {
+      font-family: $font;
+      color: $light-text;
+      font-size: 1rem;
+      max-width: 320px;
+      margin: 0 auto 12px auto;
+
+      &.is-larger {
+        max-width: 620px;
+      }
+    }
+
+    .button {
+      margin-bottom: 8px;
+      min-height: 48px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .page-placeholder {
+    .placeholder-content {
+      img {
+        max-width: 280px;
+      }
+    }
+  }
+}

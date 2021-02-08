@@ -1,0 +1,138 @@
+/*! _footer.scss | HR | Css ninja 2020-2021 */
+
+/*
+    1. Footer Base
+*/
+
+/* ==========================================================================
+1. Footer Base
+========================================================================== */
+
+.footer {
+  position: relative;
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+
+  &.footer-light {
+    background: $white;
+  }
+
+  &.footer-dark {
+    background: $dark;
+
+    .title {
+      color: $smoke-white;
+      opacity: 0.6;
+    }
+
+    .footer-link {
+      color: $smoke-white;
+      opacity: 0.8;
+
+      &:hover {
+        color: lighten($primary, 10%) !important;
+        opacity: 1;
+      }
+    }
+
+    .footer-text {
+      color: $smoke-white;
+    }
+
+    .input {
+      background: lighten($dark, 8%);
+      border-color: lighten($dark, 14%);
+
+      &:focus {
+        background: lighten($dark, 12%);
+        border-color: lighten($dark, 16%);
+      }
+
+      &::placeholder {
+        color: lighten($dark, 34%);
+      }
+    }
+  }
+
+  &.footer-left {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .footer-link {
+    font-family: $font;
+    color: $medium-text;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  .footer-text {
+    font-family: $font;
+    color: $medium-text;
+  }
+
+  .footer-logo-centered {
+    display: block;
+    width: 100%;
+    max-width: 150px;
+    margin: 0 auto;
+  }
+
+  .footer-logo-left {
+    &.css-ninja {
+      position: relative;
+      top: 4px;
+    }
+
+    &.is-square {
+      img {
+        max-width: 46px;
+        margin-right: 1.5rem;
+      }
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      max-width: 180px;
+    }
+  }
+
+  .footer-img {
+    margin: 20px auto 18px;
+    height: 140px;
+    width: 100%;
+    max-width: 640px;
+
+    img {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .footer {
+    .footer-logo-left {
+      img {
+        margin-right: 0 !important;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .footer {
+    .footer-logo-left {
+      img {
+        margin-right: 0 !important;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}

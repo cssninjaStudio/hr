@@ -1,0 +1,153 @@
+/*! _hero.scss | HR | Css ninja 2020-2021 */
+
+/*
+    1. Colors
+    2. Types
+*/
+
+/* ==========================================================================
+1. Colors
+========================================================================== */
+
+.hero {
+  &.is-grey {
+    background: $widget-grey;
+  }
+}
+
+/* ==========================================================================
+2. Types
+========================================================================== */
+
+.hero {
+  &.is-side {
+    &.is-right,
+    &.is-left {
+      .buttons {
+        .button {
+          min-width: 140px;
+        }
+      }
+    }
+  }
+
+  &.is-center {
+    text-align: center;
+
+    .hero-image-center {
+      display: block;
+      margin: 0 auto;
+      //height: 100%;
+      max-height: 380px;
+      width: auto;
+    }
+
+    .buttons {
+      justify-content: center;
+
+      .button {
+        min-width: 140px;
+      }
+    }
+  }
+
+  .hero-foot {
+    .tabs {
+      ul li {
+        padding: 0 1rem;
+
+        img {
+          display: block;
+          width: 110px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .hero {
+    &.is-side {
+      .title,
+      .subtitle {
+        text-align: center;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  .hero {
+    &.is-side {
+      .title,
+      .subtitle {
+        text-align: center;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+    }
+  }
+}
+
+.face-grid {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem 0 0 0;
+  width: 100%;
+  max-width: 940px;
+  margin: 0 auto;
+
+  .face-wrap {
+    flex: 1 1 0px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+    padding: 0 0.5rem;
+
+    .face {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: lighten($primary, 30%);
+      height: 80px;
+      width: 80px;
+      border-radius: 50%;
+      margin: 0 auto;
+
+      &.bordered {
+        background: $white;
+        border: 10px solid $primary;
+
+        &.bordered-fade-1 {
+          border-color: lighten($primary, 40%);
+        }
+
+        &.bordered-fade-2 {
+          border-color: lighten($primary, 30%);
+        }
+      }
+
+      &.fade-1 {
+        background: lighten($primary, 40%);
+      }
+
+      &.accent-fade-1 {
+        background: lighten($accent, 22%);
+      }
+
+      img {
+        display: block;
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
