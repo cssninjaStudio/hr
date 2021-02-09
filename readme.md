@@ -4,15 +4,13 @@
 
 ![Screenshot](https://cssninja.io/storage/app/media/github/hr-home.png "HR landing")
 
-## Details
+## 💡 Preview
 
 You can access the demo [here](https://cssninjastudio.github.io/hr/index.html). HR is built with[Bulma](https://bulma.io)
 
+## 👌 Usage
 
-## Usage
 The project runs with **npm** and **gulp** and is bundled with [Alpine JS](https://github.com/alpinejs/alpine), [JSON-Server](https://github.com/typicode/json-server)  and [Axios](https://github.com/axios/axios).
-
-## Usage
 
 1. Install Dev Depedencies
 
@@ -25,38 +23,6 @@ npm install
 ```sh
 npm run server
 ```
-
-## Features
-
-* Gulp 4 and nodejs 12.13.0 (minimum)
-* Bulma 0.9.2
-* ES6 support
-* Alpine JS
-* JSON server running with concurrently
-* Homepage
-* List page
-* Details page
-
-
-## Issues
-
-If you've found an issue or a bug, you can report it in the issues section of this repository. Please try to follow these simple guidelines to report your issue:
-
-* Issue definition
-* Expected behaviour
-* Actual behaviour
-* steps to reproduce
-* Already tried fixes (if relevant)
-
-## More
-
-You liked HR? Find more premium bulma templates on [Css Ninja](https://cssninja.io/category/all).
-
-Check also our premium Envato bulma themes [Css Ninja](https://cssninja.io/themes).
-
-## About Us
-
-Css Ninja is a web design studio. We build handcrafted and polished templates that will give some hype to your startup or to your next project.
 
 ### Note
 
@@ -93,3 +59,37 @@ To use this template, your computer needs:
 - [Handlebars](http://handlebarsjs.com/)
 - [Panini](https://github.com/zurb/panini)
 - [Gulp](https://gulpjs.org/getting-started)
+
+## 👍 Features
+
+* Gulp 4 and nodejs 12.13.0 (minimum)
+* Bulma 0.9.2
+* ES6 support
+* Alpine JS
+* JSON server running with concurrently
+* Homepage
+* List page
+* Details page
+
+
+## 🍔 Issues
+
+If you've found an issue or a bug, you can report it in the issues section of this repository. Please try to follow these simple guidelines to report your issue:
+
+* Issue definition
+* Expected behaviour
+* Actual behaviour
+* steps to reproduce
+* Already tried fixes (if relevant)
+
+## More
+
+You liked HR? Find more premium bulma templates on [Css Ninja](https://cssninja.io/category/all).
+
+Check also our premium Envato bulma themes [Css Ninja](https://cssninja.io/themes).
+
+## About Us
+
+Css Ninja is a web design studio. We build handcrafted and polished templates that will give some hype to your startup or to your next project.
+
+
