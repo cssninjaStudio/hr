@@ -4,7 +4,7 @@
 
 ![Screenshot](https://media.cssninja.io/products/hr/product.png "HR landing")
 
-## 💡 Preview
+## ✌️ Preview
 
 You can access the demo [here](https://cssninjastudio.github.io/hr/index.html). HR is built with [Bulma](https://bulma.io). Thanks to [Emy Lascan](https://dribbble.com/shots/14820469-wondrhub-Video-Monetization) for the homepage hero inspiration.
 
@@ -70,13 +70,13 @@ If you've found an issue or a bug, you can report it in the issues section of th
 * steps to reproduce
 * Already tried fixes (if relevant)
 
-## More
+## 🎉 More
 
 You liked HR? Find more premium bulma templates on our [Store](https://cssninja.io/category/all).
 
 Check also our premium [Envato bulma themes](https://cssninja.io/themes).
 
-## About Us
+## 🚀 About Us
 
 Css Ninja is a web design studio. We build handcrafted and polished templates that will give some hype to your startup or to your next project.
 
