@@ -1,13 +1,10 @@
-import axios from 'axios';
-
-axios.defaults.baseURL = 'http://localhost:5080';
-//axios.defaults.baseURL = "https://ninja-json-server.herokuapp.com";
+import getBaseAPI from '../utils/api';
 
 export function initPosts() {
     return {
         getPosts(){
             const _this = this;
-            axios.get('/posts')
+            getBaseAPI().get('/posts')
                 .then(response => {
                     console.log(response.data);
                     _this.posts = response.data;

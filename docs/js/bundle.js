@@ -6288,18 +6288,16 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.initPosts = initPosts;
 
-var _axios = _interopRequireDefault(require("axios"));
+var _api = _interopRequireDefault(require("../utils/api"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
-_axios["default"].defaults.baseURL = 'https://ninja-json-server.herokuapp.com'; //axios.defaults.baseURL = "https://ninja-json-server.herokuapp.com";
 
 function initPosts() {
   return {
     getPosts: function getPosts() {
       var _this = this;
 
-      _axios["default"].get('/posts').then(function (response) {
+      (0, _api["default"])().get('/posts').then(function (response) {
         console.log(response.data);
         _this.posts = response.data;
       })["catch"](function (error) {
@@ -6310,7 +6308,7 @@ function initPosts() {
   };
 }
 
-},{"axios":3}],37:[function(require,module,exports){
+},{"../utils/api":38}],37:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
