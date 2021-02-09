@@ -28,7 +28,7 @@ npm run server
 
 Changes should be commited to `src/` files only.
 
-### How to use
+### Tools
 
 The template is built with Sass and Gulp build system with these features:
 
@@ -36,19 +36,6 @@ The template is built with Sass and Gulp build system with these features:
 -	Sass compilation, prefixing with Autoprefixer, and JavaScript concatenation
 -	Built-in BrowserSync server - Will automatically reload your page when files are changed. It also live-injects CSS changes when you save a Sass file. This task runs continuously. Defaults to localhost.
 -	For production builds - CSS compression, JavaScript compression, Image compression and more..
-
-
-### Requirements
-
-To use this template, your computer needs:
-
--	Node.js is used to run the build processes. https://nodejs.org/en/download/
--   Test: run ` node -v ` in the terminal
--	Npm (Node comes with npm installed so you should have a version of npm.) Used to manage development dependencies.
--   Test: run ` npm -v`  in the terminal
--	Gulp – task runner
-	`npm install -g gulp`
--	Test: run `gulp -v ` in the terminal
 
 
 ### Additional Resources:
@@ -59,6 +46,7 @@ To use this template, your computer needs:
 - [Handlebars](http://handlebarsjs.com/)
 - [Panini](https://github.com/zurb/panini)
 - [Gulp](https://gulpjs.org/getting-started)
+
 
 ## 👍 Features
 
@@ -84,9 +72,9 @@ If you've found an issue or a bug, you can report it in the issues section of th
 
 ## More
 
-You liked HR? Find more premium bulma templates on [Css Ninja](https://cssninja.io/category/all).
+You liked HR? Find more premium bulma templates on our [Store](https://cssninja.io/category/all).
 
-Check also our premium Envato bulma themes [Css Ninja](https://cssninja.io/themes).
+Check also our premium [Envato bulma themes](https://cssninja.io/themes).
 
 ## About Us
 
