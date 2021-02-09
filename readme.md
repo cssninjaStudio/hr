@@ -6,7 +6,7 @@
 
 ## 💡 Preview
 
-You can access the demo [here](https://cssninjastudio.github.io/hr/index.html). HR is built with[Bulma](https://bulma.io)
+You can access the demo [here](https://cssninjastudio.github.io/hr/index.html). HR is built with[Bulma](https://bulma.io). Thanks to [Emy Lascan](https://dribbble.com/shots/14820469-wondrhub-Video-Monetization) for the homepage hero inspiration.
 
 ## 👌 Usage
 
