@@ -1,27 +1,27 @@
 "use strict";
 
-import './store/store';
-import 'alpinejs';
-import { initPageLoader } from './libs/components/pageloader';
-import { initNavbar } from './libs/components/navbar';
-import { initPosts } from './libs/components/posts';
-import { initEmployees } from './libs/components/employees';
-import { initEmployee } from './libs/components/employee';
-const feather = require('feather-icons');
+//Alpine JS and plugins import
+import Alpine from "alpinejs";
+import intersect from "@alpinejs/intersect";
+import Fern from "@ryangjchandler/fern";
 
-window.initNavbar = initNavbar;
-window.initPosts = initPosts;
-window.initEmployees = initEmployees;
-window.initEmployee = initEmployee;
+window.Alpine = Alpine;
+//Init intersect plugin
+Alpine.plugin(intersect);
+//Init Fern plugin
+Alpine.plugin(Fern);
+//Init Fern persisted store
+Alpine.persistedStore("app", {
+  isDark: false,
+});
+//Start Alpine JS
+Alpine.start();
 
-const showPageloader = initPageLoader();
+import { env } from "./libs/utils/constants";
+import "./libs/components";
 
 document.onreadystatechange = function () {
-    if (document.readyState == 'complete') {
-
-        //Feather Icons
-        const featherIcons = feather.replace();
-        
-    }
-}
-
+  if (document.readyState == "complete") {
+    //App init
+  }
+};

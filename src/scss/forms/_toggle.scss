@@ -1,0 +1,318 @@
+/*! _toggle.scss | Houseo | Css ninja 2020-2021 */
+
+/*
+    1. Form Switch
+    2. Ninja Toggle
+    3. Theme Toggle
+*/
+
+/* ==========================================================================
+1. Form Switch
+========================================================================== */
+
+.f-switch {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+
+  &.is-primary {
+    input {
+      &:checked + i {
+        background-color: var(--primary);
+      }
+    }
+  }
+
+  &.is-accent {
+    input {
+      &:checked + i {
+        background-color: var(--accent);
+      }
+    }
+  }
+
+  &.is-success {
+    input {
+      &:checked + i {
+        background-color: var(--success);
+      }
+    }
+  }
+
+  &.is-info {
+    input {
+      &:checked + i {
+        background-color: var(--info);
+      }
+    }
+  }
+
+  &.is-warning {
+    input {
+      &:checked + i {
+        background-color: var(--warning);
+      }
+    }
+  }
+
+  &.is-danger {
+    input {
+      &:checked + i {
+        background-color: var(--danger);
+      }
+    }
+  }
+
+  i {
+    position: relative;
+    display: inline-block;
+    margin-right: 0.5rem;
+    width: 46px;
+    height: 26px;
+    background-color: #e6e6e6;
+    border-radius: 23px;
+    vertical-align: text-bottom;
+    transition: all 0.3s linear;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 42px;
+      height: 22px;
+      background-color: var(--white);
+      border-radius: 11px;
+      transform: translate3d(2px, 2px, 0) scale3d(1, 1, 1);
+      transition: all 0.25s linear;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 22px;
+      height: 22px;
+      background-color: var(--white);
+      border-radius: 11px;
+      box-shadow: 0 2px 2px rgba(0, 0, 0, 0.24);
+      transform: translate3d(2px, 2px, 0);
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  &:active {
+    i::after {
+      width: 28px;
+      transform: translate3d(2px, 2px, 0);
+    }
+
+    input {
+      &:checked + i::after {
+        transform: translate3d(16px, 2px, 0);
+      }
+    }
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+
+    &:checked + i {
+      background-color: var(--success);
+
+      &::before {
+        transform: translate3d(18px, 2px, 0) scale3d(0, 0, 0);
+      }
+
+      &::after {
+        transform: translate3d(22px, 2px, 0);
+      }
+    }
+  }
+
+  small {
+    color: var(--muted-grey);
+    position: relative;
+    top: -4px;
+  }
+}
+
+/* ==========================================================================
+2. Ninja Toggle
+========================================================================== */
+
+.ninja-toggle {
+  position: relative;
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+
+    &:checked {
+      + label {
+        span {
+          &.track {
+            .track-knob {
+              margin-left: 22px;
+              transform: rotate(360deg);
+              background: var(--primary);
+              border-color: var(--primary);
+              box-shadow: var(--primary-box-shadow);
+
+              i {
+                opacity: 1;
+              }
+
+              svg {
+                &.sun {
+                  display: none;
+                  stroke-width: var(--dark-text);
+                }
+
+                &.moon {
+                  display: block;
+                  stroke: var(--white);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  label {
+    display: block;
+    cursor: pointer;
+
+    span {
+      display: block;
+
+      &.track {
+        position: relative;
+
+        .track-inner {
+          height: 11px;
+          width: 42px;
+          background: var(--placeholder);
+          border-radius: 100px;
+        }
+
+        .track-knob {
+          position: absolute;
+          top: -8px;
+          left: -2px;
+          height: 26px;
+          width: 26px;
+          border-radius: 50%;
+          border: 1px solid darken(var(--fade-grey), 3%);
+          box-shadow: var(--light-box-shadow);
+          background: var(--white);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transform: rotate(0);
+          transition: all 0.3s;
+
+          i {
+            color: var(--white);
+            opacity: 0;
+            transition: all 0.3s;
+          }
+
+          svg {
+            height: 14px;
+            width: 14px;
+            stroke-width: 1.6px;
+            stroke: var(--dark-text);
+
+            &.sun {
+              display: block;
+            }
+
+            &.moon {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* ==========================================================================
+3. Theme Toggle
+========================================================================== */
+
+.theme-toggle {
+  position: relative;
+  display: block;
+  overflow: hidden;
+
+  input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0%;
+    cursor: pointer;
+    z-index: 2;
+
+    &:checked {
+      + .theme-toggle-inner {
+        .sun-icon {
+          transform: translate(-45%, 150%);
+          opacity: 0%;
+        }
+
+        .moon-icon {
+          transform: translate(-45%, -50%);
+          opacity: 100%;
+        }
+      }
+    }
+  }
+
+  .theme-toggle-inner {
+    display: block;
+    position: relative;
+    height: 36px;
+    width: 36px;
+    background: var(--wrap-bg-color);
+    border: 1px solid var(--wrap-border-color);
+    font-size: 1.25rem;
+    border-radius: 50%;
+
+    .sun-icon,
+    .moon-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      display: block;
+      opacity: 0%;
+      transition: transform 0.3s, opacity 0.3s;
+      color: var(--yellow);
+      pointer-events: none;
+
+      circle,
+      path {
+        fill: var(--yellow);
+      }
+    }
+
+    .sun-icon {
+      transform: translate(-48%, -50%);
+      opacity: 100%;
+    }
+
+    .moon-icon {
+      transform: translate(-45%, -150%);
+    }
+  }
+}

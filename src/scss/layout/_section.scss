@@ -4,13 +4,14 @@
     1. Section Base
 */
 
-
 /* ==========================================================================
 1. Section Base
 ========================================================================== */
 
 .section {
-    &.is-grey {
-        background: $widget-grey;
-    }
+  background: var(--section-bg-color);
+
+  &.is-grey {
+    background: var(--section-bg-color-grey);
+  }
 }

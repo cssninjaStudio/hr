@@ -1,0 +1,60 @@
+:root {
+  --button-base-color: var(--dark-text);
+  --button-base-bg-color: var(--white);
+  --button-base-border-color: var(--border);
+  --button-base-border-color-hover: var(--border-hover);
+  --button-base-shadow: var(--light-box-shadow);
+  --button-light-color: var(--dark-text);
+  --button-light-color-inverted: var(--white);
+  --button-light-bg-color: var(--widget-grey);
+  --button-light-bg-color-inverted: var(--white);
+  --button-light-border-color: var(--widget-grey);
+  --button-light-border-color-inverted: var(--white);
+  --button-primary-color: var(--white);
+  --button-primary-color-inverted: var(--primary);
+  --button-primary-bg-color: var(--primary);
+  --button-primary-bg-color-hover: var(--primary-light-4);
+  --button-primary-border-color: var(--primary);
+  --button-primary-border-color-hover: var(--primary-light-4);
+  --button-secondary-color: var(--white);
+  --button-secondary-color-inverted: var(--secondary);
+  --button-secondary-bg-color: var(--secondary);
+  --button-secondary-bg-color-hover: var(--secondary-light-4);
+  --button-secondary-border-color: var(--secondary);
+  --button-secondary-border-color-hover: var(--secondary-light-4);
+  --button-success-color: var(--white);
+  --button-success-color-inverted: var(--success);
+  --button-success-bg-color: var(--success);
+  --button-success-bg-color-hover: var(--success-light-4);
+  --button-success-border-color: var(--success);
+  --button-success-border-color-hover: var(--success-light-4);
+  --button-info-color: var(--white);
+  --button-info-color-inverted: var(--info);
+  --button-info-bg-color: var(--info);
+  --button-info-bg-color-hover: var(--info-light-4);
+  --button-info-border-color: var(--info);
+  --button-info-border-color-hover: var(--info-light-4);
+  --button-warning-color: var(--white);
+  --button-warning-color-inverted: var(--warning);
+  --button-warning-bg-color: var(--warning);
+  --button-warning-bg-color-hover: var(--warning-light-4);
+  --button-warning-border-color: var(--warning);
+  --button-warning-border-color-hover: var(--warning-light-4);
+  --button-danger-color: var(--white);
+  --button-danger-color-inverted: var(--danger);
+  --button-danger-bg-color: var(--danger);
+  --button-danger-bg-color-hover: var(--danger-light-4);
+  --button-danger-border-color: var(--danger);
+  --button-danger-border-color-hover: var(--danger-light-4);
+}
+
+.is-dark {
+  --button-base-color: var(--white-smoke);
+  --button-base-bg-color: var(--night-light-6);
+  --button-base-border-color: var(--night-light-14);
+  --button-base-border-color-hover: var(--night-light-24);
+  --button-light-color: var(--white-smoke);
+  --button-light-bg-color: var(--night-light-10);
+  --button-light-border-color: var(--night-light-10);
+  --button-light-color-inverted-hover: var(--dark-text);
+}

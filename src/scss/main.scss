@@ -4,30 +4,32 @@
 SCSS Imports
 ========================================================================== */
 
-@import "abstracts/variables";
-@import "abstracts/brands";
-@import "abstracts/shadows";
-@import "abstracts/typography";
+//CSS vars setup
+@import './bulma-generated/generated-vars.sass';
+@import './css-variables/all';
 
-@import "../sass/bulma";
+//Additional variables
+@import './abstracts/variables';
 
-@import "utilities/utilities";
+//Bulma
+@import '../../node_modules/bulma-css-vars/bulma-cv-lib';
+@import '../sass/sass/base/_all.sass';
+@import '../sass/sass/elements/_all.sass';
+@import '../sass/sass/form/_all.sass';
+@import '../sass/sass/components/_all.sass';
+@import '../sass/sass/grid/_all.sass';
+@import '../sass/sass/helpers/_all.sass';
+@import '../sass/sass/layout/_all.sass';
+@import '../sass/sass/extensions/_all.sass';
 
-@import "abstracts/animations";
-@import "abstracts/helpers";
+//Utilities
+@import "utilities/all";
 
-@import "components/pageloader";
-@import "components/placeload";
-@import "components/navbar";
-@import "components/hamburger";
-@import "components/button";
-@import "components/card";
-@import "components/table";
-@import "components/tag";
+//Base
+@import "base/all";
 
-@import "forms/input";
+//Form
+@import "forms/all";
 
-@import "layout/hero";
-@import "layout/section";
-@import "layout/footer";
-@import "layout/details";
+//Layout
+@import "layout/all";

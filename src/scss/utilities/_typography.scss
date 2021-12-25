@@ -1,0 +1,220 @@
+/*! _typography.scss | Faqster | Css ninja 2020-2021 */
+
+/*
+    1. Titles
+    2. Typography Helpers
+*/
+
+/* ==========================================================================
+1. Titles
+========================================================================== */
+
+//$font: "Roboto", sans-serif;
+//$font-alt: "Montserrat", sans-serif;
+
+body {
+  font-family: var(--font);
+  color: var(--dark-text);
+}
+
+var {
+  font-style: normal;
+}
+
+.default-link {
+  font-family: var(--font);
+  color: var(--primary);
+  transition: all 0.3s;
+
+  &:hover {
+    color: var(--primary);
+    opacity: 0.7;
+  }
+}
+
+.title {
+  font-family: var(--font-alt);
+  color: var(--title-color);
+
+  &.is-0 {
+    font-size: 4rem;
+  }
+
+  &.is-narrow {
+    margin-bottom: 0 !important;
+  }
+
+  &.is-leading {
+    margin-bottom: 0.5rem !important;
+  }
+
+  &.is-inverted {
+    color: var(--title-color-inverted);
+  }
+
+  &.is-thin {
+    font-weight: 300;
+  }
+
+  &.is-heavy {
+    font-weight: 600;
+  }
+
+  &.is-bold {
+    font-weight: 700;
+  }
+
+  &.is-bolder {
+    font-weight: 800;
+  }
+}
+
+.subtitle {
+  font-family: var(--font);
+  color: var(--subtitle-color);
+
+  &.is-narrow {
+    margin-bottom: 0 !important;
+  }
+
+  &.is-thin {
+    font-weight: 300;
+  }
+
+  &.is-heavy {
+    font-weight: 600;
+  }
+
+  &.is-bold {
+    font-weight: 700;
+  }
+
+  &.is-bolder {
+    font-weight: 800;
+  }
+}
+
+.paragraph {
+  font-family: var(--font);
+  color: var(--paragraph-color);
+
+  &.is-inverted {
+    color: var(--paragraph-color-inverted);
+  }
+
+  &.leading-tight {
+    line-height: 1.2;
+  }
+}
+
+.content {
+  p {
+    font-family: var(--font);
+  }
+}
+
+.separator {
+  width: 1px;
+  height: 26px;
+  border-right: 1px solid var(--border);
+}
+
+/* ==========================================================================
+2. Typography Helpers
+========================================================================== */
+
+.text-light {
+  color: var(--light-text) !important;
+}
+
+.text-medium {
+  color: var(--medium-text) !important;
+}
+
+.text-dark {
+  color: var(--dark-text) !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.is-font {
+  font-family: var(--font);
+}
+
+.is-font-alt {
+  font-family: var(--font-alt) !important;
+}
+
+.is-weight-300 {
+  font-weight: 300 !important;
+}
+
+.is-weight-400 {
+  font-weight: 400 !important;
+}
+
+.is-weight-500 {
+  font-weight: 500 !important;
+}
+
+.is-weight-600 {
+  font-weight: 600 !important;
+}
+
+.is-weight-700 {
+  font-weight: 700 !important;
+}
+
+.is-weight-500 {
+  font-weight: 500 !important;
+}
+
+.is-weight-900 {
+  font-weight: 900 !important;
+}
+
+.rem-70 {
+  font-size: 0.7rem !important;
+}
+
+.rem-75 {
+  font-size: 0.75rem !important;
+}
+
+.rem-80 {
+  font-size: 0.8rem !important;
+}
+
+.rem-85 {
+  font-size: 0.85rem !important;
+}
+
+.rem-90 {
+  font-size: 0.9rem !important;
+}
+
+.rem-95 {
+  font-size: 0.95rem !important;
+}
+
+.rem-100 {
+  font-size: 1rem !important;
+}
+
+.rem-115 {
+  font-size: 1.15rem !important;
+}
+
+.rem-125 {
+  font-size: 1.25rem !important;
+}
+
+.rem-150 {
+  font-size: 1.5rem !important;
+}

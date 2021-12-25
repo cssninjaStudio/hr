@@ -12,45 +12,32 @@
   position: relative;
   padding-top: 6rem;
   padding-bottom: 3rem;
+  background: var(--footer-default-bg-color);
 
   &.footer-light {
-    background: $white;
+    background: var(--footer-light-bg-color);
   }
 
   &.footer-dark {
-    background: $dark;
+    background: --footer-dark-bg-color;
 
     .title {
-      color: $smoke-white;
+      color: var(--white-smoke);
       opacity: 0.6;
     }
 
     .footer-link {
-      color: $smoke-white;
+      color: var(--white-smoke);
       opacity: 0.8;
 
       &:hover {
-        color: lighten($primary, 10%) !important;
+        color: var(--primary-light-10) !important;
         opacity: 1;
       }
     }
 
     .footer-text {
-      color: $smoke-white;
-    }
-
-    .input {
-      background: lighten($dark, 8%);
-      border-color: lighten($dark, 14%);
-
-      &:focus {
-        background: lighten($dark, 12%);
-        border-color: lighten($dark, 16%);
-      }
-
-      &::placeholder {
-        color: lighten($dark, 34%);
-      }
+      color: var(--white-smoke);
     }
   }
 
@@ -60,18 +47,18 @@
   }
 
   .footer-link {
-    font-family: $font;
-    color: $medium-text;
+    font-family: var(--font);
+    color: var(--medium-text);
     transition: color 0.3s;
 
     &:hover {
-      color: $primary;
+      color: var(--primary);
     }
   }
 
   .footer-text {
     font-family: $font;
-    color: $medium-text;
+    color: var(--medium-text);
   }
 
   .footer-logo-centered {

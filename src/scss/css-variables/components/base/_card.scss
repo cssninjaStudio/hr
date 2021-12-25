@@ -1,0 +1,15 @@
+:root {
+  --card-bg-color: var(--white);
+  --card-bg-color-darker: var(--white);
+  --card-bg-color-lighter: var(--white);
+  --card-grey-bg-color: var(--widget-grey);
+  --card-border-color: var(--border);
+}
+
+.is-dark {
+  --card-bg-color: var(--night-light-8);
+  --card-bg-color-darker: var(--night-light-4);
+  --card-bg-color-lighter: var(--night-light-12);
+  --card-grey-bg-color: var(--night-light-8);
+  --card-border-color: var(--night-light-16);
+}

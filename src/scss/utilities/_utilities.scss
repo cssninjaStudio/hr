@@ -1,4 +1,4 @@
-/*! _utilities.scss | HR | Css ninja 2020-2021 */
+/*! _snug.scss | Faqster | Css ninja 2020-2021 */
 
 /*
     1. Reponsive variants
@@ -9,33 +9,61 @@
 ========================================================================== */
 
 @use 'sass:map';
-@use 'variants' as * with (
-  $breakpoints: (
-    'mobile': 767px,
-    'small': 768px,
-    'large': 1024px,
-    'wide': 1280px,
-  )
-);
+@use 'snug' as * with
+  (
+    $breakpoints: (
+      'mobile': 767px,
+      'small': 768px,
+      'large': 1024px,
+      'wide': 1280px,
+    )
+  );
 
-//Yellow
-.yellow {
-  @include variants('responsive' 'hover' 'group-hover') {
-    color: #FFE135;
-  }
-}
-
-//Text
-$text: (
-  'left': left,
-  'right': right,
-  'centered': center,
-  'justify': justify,
+$colors: (
+  'white': var(--white),
+  'primary': var(--primary),
+  'success': var(--success),
+  'info': var(--info),
+  'warning': var(--warning),
+  'danger': var(--danger),
+  'orange': var(--orange),
+  'blue': var(--blue),
+  'purple': var(--purple),
+  'green': var(--green),
+  'light': var(--light-text),
 );
 
 .text {
-  @include options($text, 'responsive') using ($value) {
-    text-align: $value;
+  @include options($colors, 'hover' 'group-hover') using ($value) {
+    color: $value !important;
+  }
+}
+
+.bg {
+  @include options($colors, 'hover' 'group-hover') using ($value) {
+    background-color: $value !important;
+  }
+}
+
+$opacity: (
+  '5': 5%,
+  '10': 10%,
+  '15': 15%,
+  '20': 20%,
+  '25': 25%,
+  '30': 30%,
+  '40': 40%,
+  '50': 50%,
+  '60': 60%,
+  '70': 70%,
+  '80': 80%,
+  '90': 90%,
+  '100': 100%,
+);
+
+.opacity {
+  @include options($opacity, 'hover' 'group-hover') using ($value) {
+    opacity: $value !important;
   }
 }
 
@@ -43,9 +71,9 @@ $text: (
 $spacing: (
   'px': 1px,
   '0': 0,
-  '1': .25rem,
-  '2': .5rem,
-  '3': .75rem,
+  '1': 0.25rem,
+  '2': 0.5rem,
+  '3': 0.75rem,
   '4': 1rem,
   '5': 1.25rem,
   '6': 1.5rem,
@@ -63,13 +91,15 @@ $spacing: (
 );
 
 // Add auto to the positive margin classes
-$margin: map.merge((
-  'auto': auto
-), $spacing);
+$margin: map.merge(
+  (
+    'auto': auto,
+  ),
+  $spacing
+);
 
 @include variants('responsive') using ($props...) {
-
-//Padding
+  //Padding
 
   .p {
     @include options($spacing, $props...) using ($value) {
@@ -114,7 +144,6 @@ $margin: map.merge((
       padding-left: $value;
     }
   }
-
 
   //Positive Margin
 
@@ -161,7 +190,6 @@ $margin: map.merge((
       margin-left: $value;
     }
   }
-
 
   //Negative Margin
 
@@ -221,22 +249,16 @@ $maxwidths: (
   'w-7': 46.25rem,
   'w-8': 52.5rem,
   'w-9': 58.75rem,
-  'w-fifth': 20%,
-  'w-fourth': 25%,
-  'w-third': 33.3%,
-  'w-half': 50%,
   'w-full': 100%,
 );
 
 @include variants('responsive') using ($props...) {
-
   .max {
     @include options($maxwidths, $props...) using ($value) {
       max-width: $value;
     }
   }
 }
-
 
 //blocks
 $sizes: (
@@ -264,15 +286,14 @@ $sizes: (
 );
 
 @include variants('responsive') using ($props...) {
-
-    .is {
-      @include options($sizes, $props...) using ($value) {
-        min-width: $value !important;
-        width: $value !important;
-        max-height: $value !important;
-        height: $value !important;
-      }
+  .size {
+    @include options($sizes, $props...) using ($value) {
+      min-width: $value !important;
+      width: $value !important;
+      max-height: $value !important;
+      height: $value !important;
     }
+  }
 }
 
 //Layout

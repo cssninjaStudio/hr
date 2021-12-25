@@ -1,0 +1,13 @@
+:root {
+  --section-bg-color: var(--white);
+  --section-bg-color-grey: var(--widget-grey);
+  --section-bg-color-dark: var(--dark-bg);
+  --section-border-color: var(--border);
+}
+
+.is-dark {
+  --section-bg-color: var(--night-light-3);
+  --section-bg-color-dark: var(--night-light-1);
+  --section-bg-color-grey: var(--night-light-1);
+  --section-border-color: var(--night-light-16);
+}

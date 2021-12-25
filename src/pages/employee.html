@@ -27,19 +27,19 @@ title: Employee
                   >
                     <a :href="socialProfile.channelUrl">
                       <template x-if="socialProfile.channelName === 'Facebook'">
-                        <i class="fab fa-facebook-f"></i>
+                        <i class="iconify" data-icon="fa:facebook"></i>
                       </template>
                       <template x-if="socialProfile.channelName === 'Twitter'">
-                        <i class="fab fa-twitter"></i>
+                        <i class="iconify" data-icon="fa:twitter"></i>
                       </template>
                       <template x-if="socialProfile.channelName === 'GitHub'">
-                        <i class="fab fa-github"></i>
+                        <i class="iconify" data-icon="fa:github"></i>
                       </template>
                       <template x-if="socialProfile.channelName === 'Dribbble'">
-                        <i class="fab fa-dribbble"></i>
+                        <i class="iconify" data-icon="fa:dribbble"></i>
                       </template>
                       <template x-if="socialProfile.channelName === 'Linkedin'">
-                        <i class="fab fa-linkedin-in"></i>
+                        <i class="iconify" data-icon="fa:linkedin"></i>
                       </template>
                     </a>
                   </template>
@@ -51,7 +51,7 @@ title: Employee
                 <div class="profile-card-head">
                   <h3>About</h3>
                   <a class="header-link" href="#">
-                    <i data-feather="edit-3"></i>
+                    <i class="iconify" data-icon="feather:edit-3"></i>
                     <span>Edit</span>
                   </a>
                 </div>
@@ -66,7 +66,7 @@ title: Employee
                   </p>
                   <div class="location">
                     <p>
-                      <i data-feather="map-pin"></i>
+                      <i class="iconify" data-icon="feather:map-pin"></i>
                       <span x-text="employee.firstName"></span>
                       <span>lives in</span>
                       <span class="address" x-text="employee.location"></span>
@@ -117,7 +117,7 @@ title: Employee
                 <div class="profile-card-head">
                   <h3>Tools & Skills</h3>
                   <a class="header-link" href="#">
-                    <i data-feather="edit-3"></i>
+                    <i class="iconify" data-icon="feather:edit-3"></i>
                     <span>Edit</span>
                   </a>
                 </div>
@@ -181,7 +181,7 @@ title: Employee
                 <div class="profile-card-head">
                   <h3>Experience</h3>
                   <a class="header-link" href="#">
-                    <i data-feather="edit-3"></i>
+                    <i class="iconify" data-icon="feather:edit-3"></i>
                     <span>Edit</span>
                   </a>
                 </div>
@@ -218,7 +218,7 @@ title: Employee
                 <div class="profile-card-head">
                   <h3>Education</h3>
                   <a class="header-link" href="#">
-                    <i data-feather="edit-3"></i>
+                    <i class="iconify" data-icon="feather:edit-3"></i>
                     <span>Edit</span>
                   </a>
                 </div>
@@ -265,8 +265,8 @@ title: Employee
 
               <div class="employee-block">
                 <div class="content-shape img-shape loads"></div>
-                <h3><span class="content-shape title-shape loads"></span></h3>
-                <p><span class="content-shape subtitle-shape loads"></span></p>
+                <h3 class="mx-auto"><span class="content-shape title-shape loads mb-2"></span></h3>
+                <p class="mx-auto"><span class="content-shape subtitle-shape loads"></span></p>
 
                 <div class="social-profiles">
                   <span class="content-shape social-shape loads"></span>

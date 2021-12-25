@@ -1,0 +1,9 @@
+:root {
+  --datepicker-bg-color: var(--white);
+  --datepicker-border-color: var(--border);
+}
+
+.is-dark {
+  --datepicker-bg-color: var(--night-light-8);
+  --datepicker-border-color: var(--night-light-16);
+}

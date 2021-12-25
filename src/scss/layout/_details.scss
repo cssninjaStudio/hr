@@ -16,13 +16,13 @@ Details page
     align-items: center;
     padding-bottom: 1rem;
     margin-bottom: 1.5rem;
-    border-bottom: 1px solid darken($border, 2%);
+    border-bottom: 1px solid var(--wrap-border-color);
 
     h3 {
-      font-family: $font-alt;
+      font-family: var(--font-alt);
       font-weight: 600;
       font-size: 0.75rem;
-      color: $light-text;
+      color: var(--light-text);
       text-transform: uppercase;
 
       .content-shape {
@@ -32,15 +32,15 @@ Details page
     }
 
     a {
-      font-family: $font-alt;
+      font-family: var(--font-alt);
       font-weight: 600;
       font-size: 0.75rem;
-      color: $light-text;
+      color: var(--light-text);
       text-transform: uppercase;
       transition: color 0.3s;
 
       &:hover {
-        color: $primary;
+        color: var(--primary);
       }
 
       .content-shape {
@@ -65,16 +65,16 @@ Details page
     }
 
     h3 {
-      font-family: $font;
+      font-family: var(--font);
       font-size: 1.2rem;
       font-weight: 600;
-      color: $dark-text;
+      color: var(--title-color);
       line-height: 1.2;
     }
 
     p {
       font-size: 0.95rem;
-      color: $light-text;
+      color: var(--light-text);
     }
 
     .social-profiles {
@@ -88,23 +88,25 @@ Details page
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 1px solid $border;
-        background: $white;
+        border: 1px solid var(--wrap-border-color);
+        background: var(--wrap-bg-color);
         border-radius: 50%;
         margin: 0 0.15rem;
         transition: box-shadow 0.3s;
 
         &:hover {
-          box-shadow: $light-box-shadow;
+          box-shadow: var(--light-box-shadow);
 
-          i {
-            color: $primary;
+          i,
+          .iconify {
+            color: var(--primary);
           }
         }
 
-        i {
+        i,
+        .iconify {
           font-size: 0.9rem;
-          color: $light-text;
+          color: var(--light-text);
           transition: color 0.3s;
         }
       }
@@ -112,51 +114,23 @@ Details page
 
     .content-shape {
       display: flex;
-
-      &.img-shape {
-        width: 100%;
-        max-width: 110px;
-        min-width: 110px;
-        height: 110px;
-        border-radius: 50%;
-        margin: 1rem auto 0.75rem auto;
-      }
-
-      &.title-shape {
-        min-width: 160px;
-        max-width: 160px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      &.subtitle-shape {
-        min-width: 80px;
-        max-width: 80px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      &.social-shape {
-        height: 32px;
-        width: 32px;
-        min-width: 32px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        margin: 0 0.15rem;
-      }
     }
   }
 
   .profile-card {
-    background: $white;
-    border: 1px solid $border;
+    background: var(--card-bg-color);
+    border: 1px solid var(--card-border-color);
     border-radius: 0.75rem;
     padding: 2rem;
 
     &:not(:last-child) {
       margin-bottom: 1.5rem;
+    }
+
+    .content-shape {
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
     }
 
     .profile-card-head {
@@ -167,9 +141,9 @@ Details page
 
       h3 {
         font-weight: 500;
-        font-family: $font-alt;
+        font-family: var(--font-alt);
         font-size: 1rem;
-        color: $dark-text;
+        color: var(--title-color);
 
         .content-shape {
           display: flex;
@@ -180,9 +154,9 @@ Details page
       > a {
         display: flex;
         align-items: center;
-        font-family: $font;
+        font-family: var(--font);
         font-size: 0.9rem;
-        color: $light-text;
+        color: var(--light-text);
         transition: color 0.3s;
 
         svg {
@@ -192,7 +166,7 @@ Details page
         }
 
         &:hover {
-          color: $primary;
+          color: var(--primary);
         }
 
         .content-shape {
@@ -205,7 +179,7 @@ Details page
     .profile-card-body {
       > p {
         font-size: 0.9rem;
-        color: $light-text;
+        color: var(--light-text);
 
         .content-shape {
           display: flex;
@@ -216,12 +190,12 @@ Details page
         padding-top: 1rem;
 
         p {
-          font-family: $font;
+          font-family: var(--font);
           font-size: 0.9rem;
-          color: $light-text;
+          color: var(--light-text);
 
           .address {
-            color: $dark-text;
+            color: var(--title-color);
             font-weight: 500;
             margin-left: 0.15rem;
           }
@@ -229,7 +203,7 @@ Details page
           svg {
             height: 18px;
             width: 18px;
-            stroke: $primary;
+            stroke: var(--primary);
             margin-right: 0.15rem;
           }
         }
@@ -238,16 +212,16 @@ Details page
       .projects {
         .project {
           h3 {
-            font-family: $font-alt;
+            font-family: var(--font-alt);
             font-weight: 500;
             font-size: 0.9rem;
-            color: $dark-text;
+            color: var(--title-color);
           }
 
           > p {
             font-size: 0.9rem;
-            font-family: $font;
-            color: $light-text;
+            font-family: var(--font);
+            color: var(--light-text);
           }
 
           .project-members {
@@ -270,20 +244,22 @@ Details page
       .skills {
         .skill-box {
           padding: 1.5rem;
-          border: 1px solid darken($fade-grey, 3%);
+          background: var(--card-bg-color-darker);
+          border: 1px solid var(--card-border-color);
+          border-radius: 0.75rem;
 
           h3 {
-            font-family: $font-alt;
+            font-family: var(--font-alt);
             font-weight: 500;
             font-size: 0.9rem;
-            color: $dark-text;
+            color: var(--title-color);
             margin-bottom: 0.75rem;
           }
 
           > p {
-            font-family: $font;
+            font-family: var(--font);
             font-size: 0.9rem;
-            color: $light-text;
+            color: var(--light-text);
             margin-bottom: 0.75rem;
           }
 
@@ -314,7 +290,7 @@ Details page
           + .education {
             margin-top: 1.5rem;
             padding-top: 1.5rem;
-            border-top: 1px solid darken($fade-grey, 3%);
+            border-top: 1px solid var(--card-border-color);
           }
 
           > img {
@@ -328,22 +304,22 @@ Details page
             margin-left: 1rem;
 
             h3 {
-              font-family: $font-alt;
+              font-family: var(--font-alt);
               font-weight: 500;
               font-size: 0.9rem;
-              color: $dark-text;
+              color: var(--title-color);
             }
 
             span {
               display: block;
               font-size: 0.85rem;
-              font-family: $font;
-              color: $light-text;
+              font-family: var(--font);
+              color: var(--light-text);
             }
 
             p {
-              font-family: $font;
-              color: darken($light-text, 20%);
+              font-family: var(--font);
+              color: var(--medium-text);
               font-size: 0.95rem;
               margin-top: 0.75rem;
             }
