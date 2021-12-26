@@ -1,5 +1,3 @@
-/*! _image.scss | HR | Css ninja 2020-2021 */
-
 /*
     1. Object
     2. Special Images
@@ -10,11 +8,11 @@
 ========================================================================== */
 
 .object-cover {
-    object-fit: cover !important;
+  object-fit: cover !important;
 }
 
 .object-contain {
-    object-fit: contain !important;
+  object-fit: contain !important;
 }
 
 /* ==========================================================================
@@ -22,7 +20,6 @@
 ========================================================================== */
 
 .stick-img {
-    min-height: 25rem;
-    object-fit: cover;
+  min-height: 25rem;
+  object-fit: cover;
 }
-
