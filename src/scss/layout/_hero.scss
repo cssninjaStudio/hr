@@ -1,5 +1,3 @@
-/*! _hero.scss | HR | Css ninja 2020-2021 */
-
 /*
     1. Colors
     2. Types
@@ -10,8 +8,11 @@
 ========================================================================== */
 
 .hero {
+  background: var(--hero-bg-color);
+  transition: background-color 0.3s;
+
   &.is-grey {
-    background: $widget-grey;
+    background: var(--hero-grey-bg-color);
   }
 }
 
@@ -37,7 +38,6 @@
     .hero-image-center {
       display: block;
       margin: 0 auto;
-      //height: 100%;
       max-height: 380px;
       width: auto;
     }
@@ -115,31 +115,31 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: lighten($primary, 30%);
+      background: var(--primary-light-30);
       height: 80px;
       width: 80px;
       border-radius: 50%;
       margin: 0 auto;
 
       &.bordered {
-        background: $white;
-        border: 10px solid $primary;
+        background: var(--wrap-bg-color);
+        border: 10px solid var(--primary);
 
         &.bordered-fade-1 {
-          border-color: lighten($primary, 40%);
+          border-color: var(--primary-light-40);
         }
 
         &.bordered-fade-2 {
-          border-color: lighten($primary, 30%);
+          border-color: var(--primary-light-30);
         }
       }
 
       &.fade-1 {
-        background: lighten($primary, 40%);
+        background: var(--primary-light-40);
       }
 
       &.accent-fade-1 {
-        background: lighten($accent, 22%);
+        background: var(--accent-light-22);
       }
 
       img {
@@ -147,6 +147,18 @@
         height: 80px;
         width: 80px;
         border-radius: 50%;
+      }
+    }
+  }
+}
+
+.is-dark {
+  .face-grid {
+    .face-wrap {
+      .face {
+        &.faded-dark {
+          opacity: 25%;
+        }
       }
     }
   }

@@ -1,74 +1,27 @@
-/*! _variables.scss | HR | Css ninja 2020-2021 */
-
 /*
-    1. Main Colors
-    2. Global colors
+    1. Base variable overrides
+    2. Font variable overrides
+    3. Layout variable overrides
 */
 
+/* ==========================================================================
+1. Base variable overrides
+========================================================================== */
+
+$body-color: var(--body-color);
+$border: var(--border);
+
+/* ==========================================================================
+2. Font variable overrides
+========================================================================== */
+
+$font: var(--font);
+$font-alt: var(--font-alt);
+$font-monospace: var(--font-monospace);
+
+/* ==========================================================================
+3. Layout variable overrides
+========================================================================== */
+
 $fullhd-enabled: false;
-
-/* ==========================================================================
-1. Main Colors
-========================================================================== */
-
-$primary: #3861e5;
-$secondary: #3861e5;
-$accent: #797bf2;
-
-/* ==========================================================================
-2. Global colors
-========================================================================== */
-
-$white: #fff;
-$smoke-white: #fcfcfc;
-$light-white: #f9f9f9;
-
-$placeholder: #cecece;
-$muted-grey: #999;
-$fade-grey: #ededed;
-$widget-grey: #f5f6fa;
-
-$border: darken($fade-grey, 3%);
-
-$dark-text: #283252;
-$medium-text: #757a91;
-$light-text: #a2a5b9;
-
-$danger: #e62965;
-$info: #039BE5;
-$success: #06d6a0;
-$warning: #faae42;
-
-$h-purple: #8269B2;
-$h-blue: #37C3FF;
-$h-red: #F92B60;
-$h-orange: #FFA981;
-$h-yellow: #FFD66E;
-$h-green: #93E088;
-$h-pink: #FF9EB8;
-$h-light-blue: #77D2F3;
-
-
-$dark: #344258;
-$dark-sidebar: #232326;
-$dark-dark-text: #aaaab3;
-
-
-/* ==========================================================================
-3. Bulma spacing override
-========================================================================== */
-
-$spacing-values: (
-    "0": 0, 
-    "1": 0.25rem, 
-    "2": 0.5rem, 
-    "3": 0.75rem, 
-    "4": 1rem, 
-    "5": 1.5rem, 
-    "6": 3rem,
-    "8": 4rem,
-    "10": 5rem,
-    "12": 6rem,
-    "14": 7rem,
-    "16": 8rem
-);
+$body-size: var(--font-size);

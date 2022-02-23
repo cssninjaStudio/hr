@@ -1,0 +1,133 @@
+/*
+    1. Placeload base styles
+    2. Placeload dark styles
+*/
+
+/* ==========================================================================
+1. Placeload base styles
+========================================================================== */
+
+.content-shape {
+  height: 10px;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 0.25rem;
+
+  &.w-80 {
+    max-width: 80%;
+  }
+
+  &.w-60 {
+    max-width: 60%;
+  }
+
+  &.w-40 {
+    max-width: 40%;
+  }
+
+  &.w-20 {
+    max-width: 20%;
+  }
+
+  &.img-shape {
+    width: 100%;
+    max-width: 110px;
+    min-width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    margin: 1rem auto 0.75rem auto;
+  }
+
+  &.title-shape {
+    display: block;
+    min-width: 160px;
+    max-width: 160px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &.subtitle-shape {
+    display: block;
+    min-width: 80px;
+    max-width: 80px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &.social-shape {
+    height: 32px;
+    width: 32px;
+    min-width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 0 0.15rem;
+  }
+
+  &.is-left {
+    margin-left: 0 !important;
+  }
+}
+
+.loads {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeload;
+  animation-timing-function: linear;
+  background: var(--placeload-nuance-from);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(8%, var(--placeload-nuance-from)),
+    color-stop(18%, var(--placeload-nuance-to)),
+    color-stop(33%, var(--placeload-nuance-from))
+  );
+  background: linear-gradient(
+    to right,
+    var(--placeload-nuance-from) 8%,
+    var(--placeload-nuance-to) 18%,
+    var(--placeload-nuance-from) 33%
+  );
+  background-size: 800px 104px;
+  background-size: 1200px 104px;
+  position: relative;
+}
+
+@keyframes placeload {
+  0% {
+    background-position: -468px 0;
+  }
+
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+/* ==========================================================================
+2. Placeload dark styles
+========================================================================== */
+
+.is-dark {
+  .loads {
+    background: var(--placeload-dark-nuance-from);
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(8%, var(--placeload-dark-nuance-from)),
+      color-stop(18%, var(--placeload-dark-nuance-to)),
+      color-stop(33%, var(--placeload-dark-nuance-from))
+    );
+    background: linear-gradient(
+      to right,
+      var(--placeload-dark-nuance-from) 8%,
+      var(--placeload-dark-nuance-to) 18%,
+      var(--placeload-dark-nuance-from) 33%
+    );
+    background-size: 800px 104px;
+    background-size: 1200px 104px;
+  }
+}

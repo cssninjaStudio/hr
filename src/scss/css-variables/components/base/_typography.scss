@@ -1,0 +1,17 @@
+:root {
+  --title-color: var(--dark-text);
+  --title-color-inverted: var(--white-smoke);
+  --subtitle-color: var(--medium-text);
+  --subtitle-color-inverted: var(--light-text);
+  --paragraph-color: var(--medium-text);
+  --paragraph-color-inverted: var(--light-text);
+  --code-bg-color: var(--widget-grey);
+  --code-color: var(--success);
+}
+
+.is-dark {
+  --title-color: var(--white-smoke);
+  --subtitle-color: var(--light-text);
+  --code-bg-color: var(--night-light-14);
+  --code-color: var(--success);
+}

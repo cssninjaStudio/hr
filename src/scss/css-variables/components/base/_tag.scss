@@ -1,0 +1,13 @@
+:root {
+  --tag-default-bg-color: var(--widget-grey);
+  --tag-default-color: var(--dark-text);
+  --tag-solid-bg-color: var(--white);
+  --tag-solid-border-color: var(--border);
+}
+
+.is-dark {
+  --tag-default-bg-color: var(--night-light-12);
+  --tag-default-color: var(--light-text);
+  --tag-solid-bg-color: var(--night-light-10);
+  --tag-solid-border-color: var(--night-light-16);
+}

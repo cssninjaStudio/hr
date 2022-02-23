@@ -1,0 +1,34 @@
+/*! _shadows.scss | Faqster | Css ninja 2020-2021 */
+
+/*
+    1. Base Shadows
+    2. State Shadows
+    3. Stack Shadows
+    4. Brand Shadows
+    5. Additional Colors Shadows
+*/
+
+/* ==========================================================================
+1. Base Shadows
+========================================================================== */
+
+$shadow-colors: 'primary', 'secondary', 'danger', 'warning', 'info', 'success', 'purple',
+  'blue', 'red', 'orange', 'yellow', 'green', 'github', 'invision', 'facebook', 'amazon',
+  'twitter', 'angular', 'linkedin';
+
+:root {
+  --base-shadow: rgb(0 0 0 / 12%);
+  --light-box-shadow: -1px 3px 10px 0 rgb(0 0 0 / 6%);
+  --light-box-shadow-md: -1px 3px 10px 0 rgb(0 0 0 / 12%);
+
+  @each $color in $shadow-colors {
+    --#{$color}-shadow-from: hsl(
+      var(--#{$color}-h) var(--#{$color}-s) var(--#{$color}-l) / 42%
+    );
+    --#{$color}-shadow-to: hsl(
+      var(--#{$color}-h) var(--#{$color}-s) var(--#{$color}-l) / 20%
+    );
+    --#{$color}-box-shadow: 0 14px 26px -12px var(--#{$color}-shadow-from),
+      0 4px 23px 0 var(--base-shadow), 0 8px 10px -5px var(--#{$color}-shadow-to) !important;
+  }
+}

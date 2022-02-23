@@ -1,0 +1,67 @@
+/* ==========================================================================
+1. Base Resets
+========================================================================== */
+
+body {
+  background: var(--html-bg-color);
+  transition: background-color 0.3s;
+  overflow: hidden;
+}
+
+code {
+  background: var(--code-bg-color);
+  color: var(--code-color);
+}
+
+hr {
+  height: 1px;
+  background: var(--card-border-color);
+
+  &.is-inverted {
+    background: var(--dark-bg-light-16);
+  }
+}
+
+a {
+  &.action-link, &.back-link {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font);
+    font-weight: 500;
+    color: var(--action-link-color);
+    transition: color .3s, opacity .3s;
+  
+    .iconify {
+      transition: transform .3s;
+    }
+  
+    &:hover {
+      color: var(--action-link-color-hover);
+      opacity: .8;
+    }
+  }
+  
+  &.action-link {
+    .iconify {
+      margin-left: .25rem;
+    }
+  
+    &:hover {
+      .iconify {
+        transform: translateX(.25rem);
+      }
+    }
+  }
+  
+  &.back-link {
+    .iconify {
+      margin-right: .25rem;
+    }
+  
+    &:hover {
+      .iconify {
+        transform: translateX(-.25rem);
+      }
+    }
+  }
+}

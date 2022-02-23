@@ -1,0 +1,36 @@
+:root {
+  --input-base-color: var(--medium-text);
+  --input-inverted-color: var(--white-smoke);
+  --input-base-bg-color: var(--white);
+  --input-inverted-bg-color: var(--dark-light-5);
+  --input-base-border-color: var(--border);
+  --input-base-border-color-hover: var(--border-hover);
+  --input-base-focus-color: var(--border-hover);
+  --input-inverted-border-color: var(--dark-light-12);
+  --input-inverted-border-color-hover: var(--dark-light-16);
+  --input-inverted-focus-color: var(--border-hover);
+  --input-inverted-placeholder-color: var(--dark-light-24);
+  --input-base-shadow: var(--light-box-shadow);
+  --input-form-icon-color: var(--placeholder);
+  --input-placeholder-color: var(--placeholder);
+  --input-label-color: var(--light-text);
+  --input-form-button-bg-color: var(--white);
+  --input-form-button-border-color: var(--border);
+  --input-form-button-color: var(--medium-text);
+}
+
+.is-dark {
+  --input-base-color: var(--light-text);
+  --input-base-bg-color: var(--night-light-6);
+  --input-inverted-bg-color: var(--night-light-8);
+  --input-base-border-color: var(--night-light-14);
+  --input-base-border-color-hover: var(--night-light-24);
+  --input-base-focus-color: var(--primary);
+  --input-inverted-border-color: var(--night-light-16);
+  --input-inverted-border-color-hover: var(--night-light-20);
+  --input-inverted-focus-color: var(--primary);
+  --input-form-icon-color: var(--medium-text);
+  --input-placeholder-color: var(--night-light-30);
+  --input-form-button-bg-color: var(--night-light-14);
+  --input-form-button-border-color: var(--night-light-22);
+}

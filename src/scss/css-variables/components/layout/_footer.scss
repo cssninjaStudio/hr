@@ -1,0 +1,19 @@
+:root {
+  --footer-default-bg-color: var(--widget-grey);
+  --footer-light-bg-color: var(--white);
+  --footer-light-link-color: var(--medium-text);
+  --footer-light-link-color-hover: var(--primary);
+  --footer-light-border-color: var(--border);
+  --footer-dark-bg-color: var(--dark);
+  --footer-dark-heading-color: var(--white-smoke);
+  --footer-dark-link-color: var(--light-text);
+  --footer-dark-link-color-hover: var(--primary-light-8);
+  --footer-dark-border-color: var(--dark-border);
+}
+
+.is-dark {
+  --footer-default-bg-color: var(--night-light-6);
+  --footer-light-bg-color: var(--night-light-8);
+  --footer-dark-bg-color: var(--night-light-6);
+  --footer-dark-border-color: var(--night-light-8);
+}

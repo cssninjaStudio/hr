@@ -1,0 +1,17 @@
+:root {
+  --wrap-bg-color: var(--white);
+  --wrap-bg-color-heavy: var(--white);
+  --wrap-border-color: var(--border);
+  --wrap-muted-color: var(--widget-grey);
+  --wrap-inverted-color: var(--blue-grey);
+  --wrap-inverted-bg: var(--white);
+}
+
+.is-dark {
+  --wrap-bg-color: var(--night-light-8);
+  --wrap-bg-color-heavy: var(--night-light-4);
+  --wrap-border-color: var(--night-light-16);
+  --wrap-muted-color: var(--night-light-12);
+  --wrap-inverted-color: var(--white-smoke);
+  --wrap-inverted-bg: var(--night-light-8);
+}

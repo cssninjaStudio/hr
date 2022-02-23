@@ -1,5 +1,3 @@
-/*! _input.scss | HR | Css ninja 2020-2021 */
-
 /*
     1. Field
     2. Control
@@ -13,9 +11,9 @@
 
 .field {
   > label {
-    font-family: $font;
+    font-family: var(--font);
     font-size: 0.95rem;
-    color: $medium-text;
+    color: var(--input-label-color);
   }
 }
 
@@ -24,32 +22,6 @@
 ========================================================================== */
 
 .control {
-  &.has-icons-left,
-  &.has-icons-right {
-    .input {
-      &.is-medium {
-        ~ .icon {
-          height: 46px;
-          width: 46px;
-        }
-      }
-
-      &.is-large {
-        ~ .icon {
-          height: 54px;
-          width: 54px;
-        }
-      }
-
-      &:not(.is-medium):not(.is-large) {
-        ~ .icon {
-          height: 40px;
-          width: 40px;
-        }
-      }
-    }
-  }
-
   &.has-icon {
     .form-icon {
       position: absolute;
@@ -60,7 +32,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      color: $placeholder;
+      color: var(--input-form-icon-color);
       transition: color 0.3s;
 
       &.is-medium {
@@ -94,7 +66,7 @@
 
       &:focus {
         ~ .form-icon {
-          color: $secondary;
+          color: var(--primary);
         }
       }
     }
@@ -106,30 +78,31 @@
 ========================================================================== */
 
 .input {
+  font-family: var(--font);
   transition: all 0.3s;
   box-shadow: none;
-  border-color: $border;
+  color: var(--input-base-color);
+  background: var(--input-base-bg-color);
+  border-color: var(--input-base-border-color);
+
+  &:hover {
+    border-color: var(--input-base-border-color-hover);
+  }
 
   &:focus {
-    box-shadow: $light-box-shadow;
-    border-color: darken($border, 2%);
+    box-shadow: var(--light-box-shadow);
+    border-color: var(--input-base-border-color-hover);
 
-    ~ .icon {
-      color: $primary !important;
+    ~ .form-icon {
+      color: var(--primary) !important;
     }
   }
 
-  &.is-medium {
-    height: 46px;
-    font-size: 1.15rem;
+  &::placeholder {
+    color: var(--input-placeholder-color);
   }
 
-  &.is-large {
-    height: 54px;
-    font-size: 1.35rem;
-  }
-
-  ~ .icon {
+  ~ .form-icon {
     transition: color 0.3s;
   }
 }
@@ -141,10 +114,20 @@
 .textarea {
   transition: all 0.3s;
   box-shadow: none;
-  border-color: $border;
+  color: var(--input-base-color);
+  background: var(--input-base-bg-color);
+  border-color: var(--input-base-border-color);
+
+  &:hover {
+    border-color: var(--input-base-border-color-hover);
+  }
 
   &:focus {
-    box-shadow: $light-box-shadow;
-    border-color: darken($border, 2%);
+    box-shadow: var(--light-box-shadow);
+    border-color: var(--input-base-border-color-hover);
+  }
+
+  &::placeholder {
+    color: var(--input-placeholder-color);
   }
 }

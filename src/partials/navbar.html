@@ -1,75 +1,101 @@
-<nav class="navbar is-transparent is-centered is-fixed-top is-fade" x-data="initNavbar()"  x-on:scroll.window="scroll()" 
-    :class="{
+<nav
+  class="navbar is-transparent is-centered is-fixed-top is-fade"
+  x-data="initNavbar()"
+  x-on:scroll.window="scroll()"
+  :class="{
         'is-scrolled': scrolled,
         '': !scrolled,
         'is-solid': mobileOpen,
         '': !mobileOpen,
         'is-search-mobile': mobileSearch,
         '': !mobileSearch
-    }">
-    <div class="container">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="/">
-                <img class="navbar-logo" src="img/logo/logo.svg" alt="">
-            </a>
-            <a class="navbar-item is-icon" @click="toggleMobileSearch()">
-                <i data-feather="search"></i>
-            </a>
-            <div class="navbar-burger" @click="openMobileMenu()">
-                <div class="menu-toggle">
-                    <div class="icon-box-toggle is-navbar" :class="{
-                            'active': mobileOpen,
-                            '': !mobileOpen
-                        }">
-                        <div class="rotate">
-                            <i class="icon-line-top"></i>
-                            <i class="icon-line-center"></i>
-                            <i class="icon-line-bottom"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="navbar-menu b-centered-mobile b-centered-tablet-p" :class="{
-                'is-active': mobileOpen,
+    }"
+>
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <img class="navbar-logo" src="img/logo/logo.svg" alt="" />
+      </a>
+      <a class="navbar-item is-icon" @click="toggleMobileSearch()">
+        <i data-feather="search"></i>
+      </a>
+      <div class="navbar-burger" @click="openMobileMenu()">
+        <div class="menu-toggle">
+          <div
+            class="icon-box-toggle is-navbar"
+            :class="{
+                'active': mobileOpen,
                 '': !mobileOpen
-            }">
-            <div class="navbar-start">
-                <div class="left-brand">
-                    <a class="navbar-item" href="/">
-                        <img src="img/logo/logo.svg" alt="">
-                    </a>
-                </div>
+            }"
+          >
+            <div class="rotate">
+              <i class="icon-line-top"></i>
+              <i class="icon-line-center"></i>
+              <i class="icon-line-bottom"></i>
             </div>
-            <div class="navbar-center">
-                <div class="navbar-item is-search">
-                    <div class="control has-icons-left has-icons-right">
-                        <input x-on:keyup="searchData($event)" x-model="searchModel" class="input is-rounded" type="text" placeholder="Search...">
-                        <span class="icon is-small is-left">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="feather feather-search">
-                                <circle cx="11" cy="11" r="8"></circle>
-                                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                            </svg>
-                        </span>
-                        <span class="icon is-small is-close is-right" @click.prevent="toggleMobileSearch()" 
-                            :class="{ '': searchModel === '' }">
-                            <i data-feather="x" class="no-click"></i>
-                        </span>
-                        <div id="search-results" class="search-results has-slimscroll"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="navbar-end">
-                <a href="employees.html" class="navbar-item">Explore</a>
-                <a href="https://cssninja.io/" class="navbar-item">Help</a>
-                <div class="navbar-item">
-                    <a href="https://cssninja.io/contact" class="button is-primary">
-                        <span>Get in Touch</span>
-                    </a>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </div>
+    <div
+      class="navbar-menu b-centered-mobile b-centered-tablet-p"
+      :class="{
+            'is-active': mobileOpen,
+            '': !mobileOpen
+        }"
+    >
+      <div class="navbar-start">
+        <div class="left-brand">
+          <a class="navbar-item" href="/">
+            <img src="img/logo/logo.svg" alt="" />
+          </a>
+        </div>
+      </div>
+      <div class="navbar-center">
+        <div class="navbar-item is-search">
+          <div class="control has-icon">
+            <input
+              x-on:keyup="searchData($event)"
+              x-model="searchModel"
+              class="input is-rounded"
+              type="text"
+              placeholder="Search..."
+            />
+            <span class="form-icon">
+              <i class="iconify" data-icon="feather:search"></i>
+            </span>
+            <span
+              class="icon is-small is-close is-right"
+              @click.prevent="toggleMobileSearch()"
+              :class="{ '': searchModel === '' }"
+            >
+              <i data-feather="x" class="no-click"></i>
+            </span>
+            <div
+              id="search-results"
+              class="search-results has-slimscroll"
+            ></div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar-end">
+        <a href="employees.html" class="navbar-item">Explore</a>
+        <a href="https://cssninja.io/" class="navbar-item">Help</a>
+        <div class="navbar-item">
+          <label class="theme-toggle">
+            <input type="checkbox" x-on:change="toggleTheme()" />
+            <span class="theme-toggle-inner">
+              <i class="sun-icon iconify" data-icon="feather:sun"></i>
+              <i class="moon-icon iconify" data-icon="feather:moon"></i>
+            </span>
+          </label>
+        </div>
+        <div class="navbar-item">
+          <a href="https://cssninja.io/contact" class="button is-primary is-long-2">
+            <span>Get in Touch</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </nav>

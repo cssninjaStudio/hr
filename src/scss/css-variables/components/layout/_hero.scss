@@ -1,0 +1,11 @@
+:root {
+  --hero-bg-color: var(--white);
+  --hero-grey-bg-color: var(--widget-grey);
+  --hero-benefits-color: var(--dark-text);
+}
+
+.is-dark {
+  --hero-bg-color: var(--night-light-3);
+  --hero-benefits-color: var(--light-text);
+  --hero-grey-bg-color: var(--night-light-1);
+}

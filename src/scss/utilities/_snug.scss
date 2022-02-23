@@ -1,0 +1,299 @@
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:meta';
+@use 'sass:selector';
+@use 'sass:string';
+
+/// List of available breakpoints.
+///
+/// @type Map
+$breakpoints: () !default;
+
+/// Get the media queries for all defined breakpoints.
+///
+/// @return {List} Returns reponsive media queries.
+@function at-responsive() {
+  $result: ();
+
+  @each $key, $value in $breakpoints {
+    $result: map.set($result, $key, '@media screen and (max-width: #{$value})');
+  }
+
+  @return $result;
+}
+
+/// Get the media query for `prefers-color-scheme: dark`.
+///
+/// @return {List} Returns the dark media query.
+@function at-dark() {
+  @return ('dark': '@media screen and (prefers-color-scheme: dark)');
+}
+
+/// Get the media query for `prefers-color-scheme: light`.
+///
+/// @return {List} Returns the light media query.
+@function at-light() {
+  @return ('light': '@media screen and (prefers-color-scheme: light)');
+}
+
+/// Convert a string to a proper class selector.
+///
+/// @param  {String}   $selector
+/// @return {Selector} Returns the class selector.
+@function to-class($selector) {
+  $separator: list.separator($selector);
+  $result: ();
+
+  @each $selector in $selector {
+    $result: list.append($result, '.#{$selector}', $separator);
+  }
+
+  @return $result;
+}
+
+/// Pop the element off the end of array.
+///
+/// @param  {List} $items
+/// @return {List} Returns the shortened list.
+@function pop($items) {
+  $separator: list.separator($items);
+  $result: ();
+
+  @for $index from 1 through list.length($items) - 1 {
+    $result: list.append($result, list.nth($items, $index), $separator);
+  }
+
+  @return $result;
+}
+
+/// Render variant.
+///
+/// @param {String} $base
+/// @param {String} $parent  [()]
+/// @param {String} $rule    [null]
+/// @param {String} $variant [null]
+/// @param {String} $pseudo  [null]
+/// @param {String} $scope   [null]
+@mixin render(
+  $base,
+  $parent: (),
+  $rule: null,
+  $variant: null,
+  $pseudo: null,
+  $scope: null
+) {
+  // Append variant
+  @if $variant {
+    $base: selector.append('#{$variant}\\:', $base);
+  }
+
+  // Append rule
+  @if $rule {
+    $base: selector.append('#{$rule}\\:', $base);
+  }
+
+  // Append pseudo-class
+  @if $scope and $pseudo {
+    $scope: selector.append($scope, ':#{$pseudo}');
+    $base: selector.nest($scope, to-class($base));
+  } @else if $scope {
+    $base: selector.nest($scope, to-class($base));
+  } @else if $pseudo {
+    $base: selector.append(to-class($base), ':#{$pseudo}');
+  } @else {
+    $base: to-class($base);
+  }
+
+  @if list.length($parent) >= 1 {
+    $base: selector.nest($parent, $base);
+  }
+
+  #{$base} {
+    @content;
+  }
+}
+
+/// Render variant inline.
+///
+/// @param {String} $base    [()]
+/// @param {String} $parent  [()]
+/// @param {String} $rule    [null]
+/// @param {String} $variant [null]
+/// @param {String} $pseudo  [null]
+/// @param {String} $scope   [null]
+@mixin render-inline($base: (), $parent: (), $context...) {
+  @each $selector in & {
+    @if list.length($selector) > 1 {
+      $value: pop($selector);
+
+      @if not list.index($parent, $value) {
+        $parent: list.append($parent, $value, comma);
+      }
+    }
+
+    $value: list.nth($selector, -1);
+    $value: string.slice($value, 2);
+
+    @if not list.index($base, $value) {
+      $base: list.append($base, $value, comma);
+    }
+  }
+
+  @at-root {
+    @include render($base, $parent, $context...) {
+      @content;
+    }
+  }
+}
+
+/// Passes input to the appropriate renderer.
+///
+/// @param {List} $variants [()]
+/// @param {Map}  $context [()]
+@mixin render-variants($variants: (), $context: ()) {
+  @if & or map.has-key($context, 'base') {
+    @include render-inline($context...) {
+      @content;
+    }
+
+    @each $variant in $variants {
+      $current-context: map.merge(
+        $context,
+        (
+          variant: $variant,
+          pseudo: $variant,
+        )
+      );
+
+      @if string.index($variant, 'group-') {
+        $current-context: map.merge(
+          $current-context,
+          (
+            pseudo: string.slice($variant, 7),
+            scope: '.group',
+          )
+        );
+      }
+
+      @include render-inline($current-context...) {
+        @content;
+      }
+    }
+  } @else {
+    @content ($variants, $context);
+  }
+}
+
+/// Generate classes for the given variants and context.
+///
+/// @param {List} $variants [()]
+/// @param {Map}  $context [()]
+@mixin variants($variants: (), $context: ()) {
+  $pseudo: ();
+  $rules: ();
+
+  @each $variant in $variants {
+    // Check for at-rules
+    @if meta.function-exists('at-#{$variant}') {
+      $func: meta.get-function('at-#{$variant}');
+      $rule: meta.call($func);
+      $rules: map.set($rules, $variant, $rule);
+    } @else {
+      $pseudo: list.append($pseudo, $variant);
+    }
+  }
+
+  @include render-variants($pseudo, $context) using ($props...) {
+    @content ($props...);
+  }
+
+  @each $rule in map.values($rules) {
+    @each $key, $value in $rule {
+      $current-context: map.merge(
+        $context,
+        (
+          rule: $key,
+        )
+      );
+
+      @if string.index($value, '@media') {
+        $value: string.slice($value, 7);
+
+        @media #{$value} {
+          @include render-variants($pseudo, $current-context) using ($props...) {
+            @content ($props...);
+          }
+        }
+      } @else if string.index($value, '@supports') {
+        $value: string.slice($value, 9);
+
+        @supports #{$value} {
+          @include render-variants($pseudo, $current-context) using ($props...) {
+            @content ($props...);
+          }
+        }
+      }
+    }
+  }
+}
+
+/// Responsive alias.
+///
+/// @param {List} $variants [()]
+@mixin responsive($variants: ()) {
+  @if not list.index($variants, 'responsive') {
+    $variants: list.append($variants, 'responsive', space);
+  }
+
+  @include variants($variants) using ($props...) {
+    @content ($props...);
+  }
+}
+
+/// Helper for creating option based modifiers or classes.
+///
+/// @param {Map}  $options
+/// @param {List} $variants [()]
+/// @param {List} $breakpoint [null]
+@mixin options($options: (), $variants: (), $context: ()) {
+  // Render options as a class modifier
+  @if & {
+    @each $key, $value in $options {
+      &-#{$key} {
+        @include walk($value, $variants, $context) using ($props...) {
+          @content ($props...);
+        }
+      }
+    }
+  }
+
+  // Render options as root classes
+  @else {
+    @include variants($variants, $context) using ($props...) {
+      @each $key, $value in $options {
+        .#{$key} {
+          @include walk($value, $props...) using ($props...) {
+            @content ($props...);
+          }
+        }
+      }
+    }
+  }
+}
+
+/// Render value recursively if necessary.
+///
+/// @param {Mixed} $value
+/// @param {List}  $variants [()]
+/// @param {List}  $breakpoint [null]
+@mixin walk($value, $variants: (), $context: ()) {
+  @if meta.type-of($value) == 'map' {
+    @include options($value, $variants, $context) using ($props...) {
+      @content ($props...);
+    }
+  } @else {
+    @include variants($variants, $context) {
+      @content ($value);
+    }
+  }
+}

@@ -1,0 +1,11 @@
+:root {
+  --dropdown-bg-color: var(--white);
+  --dropdown-border-color: var(--border);
+  --dropdown-bg-color-hover: var(--widget-grey);
+}
+
+.is-dark {
+  --dropdown-bg-color: var(--night-light-8);
+  --dropdown-border-color: var(--night-light-16);
+  --dropdown-bg-color-hover: var(--night-light-12);
+}
