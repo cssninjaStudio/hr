@@ -6,15 +6,16 @@ export function searchJSON(searchTerm, url) {
   resultsContainer.classList.add("is-active");
 
   if (searchTerm.length > 0) {
-    
-
     fetch(url)
       .then((resp) => resp.json())
       .then(function (data) {
         console.log(data);
         if (data.length > 0) {
           data.forEach(function (value, index) {
-            if ( value.fullName.search(expression) != -1 || value.position.search(expression) != -1 ) {
+            if (
+              value.fullName.search(expression) != -1 ||
+              value.position.search(expression) != -1
+            ) {
               let template = `
                         <a class="search-result" href="employee.html?id=${value.id}">
                             <img class="avatar" src="${value.photo}" alt="">

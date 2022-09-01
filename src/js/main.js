@@ -17,7 +17,6 @@ Alpine.persistedStore("app", {
 //Start Alpine JS
 Alpine.start();
 
-import { env } from "./libs/utils/constants";
 import "./libs/components";
 
 document.onreadystatechange = function () {

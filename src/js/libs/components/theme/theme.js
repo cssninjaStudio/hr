@@ -5,5 +5,5 @@ export function initTheme() {
       //this.dark = !this.dark;
       this.$store.app.isDark = !this.$store.app.isDark;
     },
-  }
+  };
 }

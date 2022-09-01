@@ -9,7 +9,7 @@
 @use "sass:map";
 @use "snug" as * with
   (
-    $breakpoints: (
+    $breakpoint: (
       "mobile": 767px,
       "small": 768px,
       "large": 1024px,

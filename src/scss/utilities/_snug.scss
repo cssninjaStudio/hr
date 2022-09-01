@@ -7,7 +7,7 @@
 /// List of available breakpoints.
 ///
 /// @type Map
-$breakpoints: () !default;
+$breakpoint: () !default;
 
 /// Get the media queries for all defined breakpoints.
 ///
@@ -15,7 +15,7 @@ $breakpoints: () !default;
 @function at-responsive() {
   $result: ();
 
-  @each $key, $value in $breakpoints {
+  @each $key, $value in $breakpoint {
     $result: map.set($result, $key, '@media screen and (max-width: #{$value})');
   }
 

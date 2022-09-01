@@ -1,4 +1,4 @@
-import getBaseAPI from '../../utils/api';
+import getBaseAPI from "../../utils/api";
 import { getUrlParams } from "../../utils/utils";
 
 const employeeId = getUrlParams("id");
@@ -23,9 +23,7 @@ export function initEmployee() {
           .catch((error) => {
             console.log(error);
           });
-      }
-
-      else {
+      } else {
         _this.isEmpty = true;
       }
     },
