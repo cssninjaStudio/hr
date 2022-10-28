@@ -10,10 +10,10 @@ services:
       traefik.enable: true
       traefik.docker.network: 'cssninja-services'
       traefik.http.routers.hr-demo.entrypoints: 'http'
-      traefik.http.routers.hr-demo.rule: 'Host(`faqster.${HOST:-127.0.0.1.nip.io}`)'
+      traefik.http.routers.hr-demo.rule: 'Host(`hr.${HOST:-127.0.0.1.nip.io}`)'
       traefik.http.routers.hr-demo.middlewares: 'https-redirect@file'
       traefik.http.services.hr-demo-https.loadbalancer.server.port: 8080
-      traefik.http.routers.hr-demo-https.rule: 'Host(`faqster.${HOST:-127.0.0.1.nip.io}`)'
+      traefik.http.routers.hr-demo-https.rule: 'Host(`hr.${HOST:-127.0.0.1.nip.io}`)'
       traefik.http.routers.hr-demo-https.tls: true
       traefik.http.routers.hr-demo-https.entrypoints: 'https'
       traefik.http.routers.hr-demo-https.tls.certresolver: 'http'

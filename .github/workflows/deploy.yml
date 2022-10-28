@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Set up dockertags
         run: |
-          echo "dockertags=digisquad/cssninja.faqster-demo:latest" >> $GITHUB_ENV
+          echo "dockertags=digisquad/cssninja.hr-demo:latest" >> $GITHUB_ENV
         
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
