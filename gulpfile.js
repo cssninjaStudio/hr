@@ -3,7 +3,6 @@ import gulp from "gulp";
 import gulpSass from "gulp-sass";
 import bourbon from "node-bourbon";
 import concat from "gulp-concat";
-import imagemin from "gulp-imagemin";
 import sourcemaps from "gulp-sourcemaps";
 import autoprefixer from "gulp-autoprefixer";
 import panini from "panini";
