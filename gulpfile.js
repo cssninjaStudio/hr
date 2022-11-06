@@ -13,6 +13,8 @@ import babelify from "babelify";
 import source from "vinyl-source-stream";
 import logSymbols from "log-symbols";
 import BrowserSync from "browser-sync";
+import replace from "gulp-replace";
+
 
 import options from "./config.js";
 
@@ -21,9 +23,13 @@ const browserSync = BrowserSync.create();
 const nodepath = "node_modules/";
 const sass = gulpSass(sassCompiler);
 
+
 //Note : Webp still not supported in major browsers including forefox
 //const webp = require('gulp-webp'); //For converting images to WebP format
 //const replace = require('gulp-replace'); //For Replacing img formats to webp in html
+
+const apiServer = process.env.API || 'http://localhost:8090'
+console.log(apiServer)
 
 //Load Previews on Browser on dev
 function livePreview(done) {
@@ -123,9 +129,11 @@ function javascriptBuild() {
       transform: [babelify.configure({ presets: ["@babel/preset-env"] })]
     })
       // Bundle it all up!
+      // .pipe(source("bundle.js"))
       .bundle()
       // Source the bundle
       .pipe(source("bundle.js"))
+      .pipe(replace('{{API_SERVER}}', apiServer))
       // Then write the resulting files to a folder
       .pipe(dest(`dist/js`))
   );

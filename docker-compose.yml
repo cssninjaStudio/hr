@@ -19,6 +19,15 @@ services:
       traefik.http.routers.hr-demo-https.entrypoints: 'https'
       traefik.http.routers.hr-demo-https.tls.certresolver: 'http'
       traefik.http.routers.hr-demo-https.service: 'hr-demo-https'
+
+  hr-api:
+    image: digisquad/cssninja.hr-api:latest
+    networks:
+      - cssninja-services
+    restart: 'unless-stopped'
+    labels:
+      traefik.enable: true
+      traefik.docker.network: 'cssninja-services'
       traefik.http.routers.hr-api.entrypoints: 'http'
       traefik.http.routers.hr-api.rule: 'Host(`api.hr.${HOST:-127.0.0.1.nip.io}`)'
       traefik.http.routers.hr-api.middlewares: 'https-redirect@docker'

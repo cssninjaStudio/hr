@@ -1,8 +1,6 @@
 FROM bitnami/node:18 AS build
 WORKDIR /app
 
-ARG API
-
 RUN corepack enable && corepack prepare pnpm@latest --activate
 
 COPY package.json ./
@@ -11,11 +9,7 @@ COPY .npmrc ./
 RUN pnpm install --frozen-lockfile
 
 COPY . .
-RUN API=https://api.hr.cssninja.io/ pnpm build
 
+EXPOSE 8090
 
-FROM bitnami/nginx:1.22 AS prod
-WORKDIR /app
-
-COPY --from=build /app/dist .
-COPY ./nginx/alpinejs.conf /opt/bitnami/nginx/conf/server_blocks/nginx.conf
+CMD ["pnpm", "server:preview"]

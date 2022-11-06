@@ -1,0 +1,15 @@
+version: '3.7'
+
+services:
+  hr-demo:
+    build:
+      context: .
+    ports: 
+      - "8080:8080"
+
+  hr-api:
+    build:
+      context: .
+      dockerfile: Dockerfile.api
+    ports: 
+      - "8090:8080"

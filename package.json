@@ -3,6 +3,37 @@
   "version": "0.1.0",
   "description": "HR - HR portal",
   "main": "gulpfile.js",
+  "scripts": {
+    "dev": "run-p dev:*",
+    "dev:gulp": "gulp",
+    "dev:server": "json-server --watch db.json --routes routes.json --port 8090",
+    "build": "gulp build",
+    "build:update-bulma-colors": "bulma-css-vars",
+    "prod": "gulp prod",
+    "server:preview": "json-server -q --read-only --routes routes.json --host 0.0.0.0 --port 8090 db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=14.18.0",
+    "npm": ">=7"
+  },
+  "keywords": [
+    "gulp",
+    "gulp4",
+    "bulma",
+    "bulmacss",
+    "sass"
+  ],
+  "author": "Css Ninja",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cssninjaStudio/hr"
+  },
+  "homepage": "https://github.com/cssninjaStudio/hr",
   "dependencies": {
     "@alpinejs/collapse": "^3.10.2",
     "@alpinejs/intersect": "^3.10.2",
@@ -12,7 +43,6 @@
     "axios": "^0.21.1",
     "bulma": "^0.9.4",
     "bulma-css-vars": "^0.7.0",
-    "concurrently": "^5.3.0",
     "feather-icons": "^4.24.0",
     "js-datepicker": "^5.16.0",
     "notyf": "^3.9.0",
@@ -42,36 +72,12 @@
     "gulp-sourcemaps": "3.0.0",
     "gulp-uglify": "3.0.2",
     "gulp-webp": "4.0.1",
+    "json-server": "^0.17.1",
     "log-symbols": "4.0.0",
     "node-bourbon": "4.2.8",
+    "npm-run-all": "^4.1.5",
     "panini": "1.7.2",
     "sass": "1.55.0",
     "vinyl-source-stream": "2.0.0"
-  },
-  "scripts": {
-    "dev": "gulp",
-    "build": "gulp build",
-    "build:update-bulma-colors": "bulma-css-vars",
-    "prod": "gulp prod",
-    "server": "concurrently \"gulp\" \"json-server --watch db.json --routes routes.json --host 0.0.0.0 --port 8080\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/"
-  },
-  "type": "module",
-  "node": "^12.20.0 || ^14.13.1 || >=16.0.0",
-  "keywords": [
-    "gulp",
-    "gulp4",
-    "bulma",
-    "bulmacss",
-    "sass"
-  ],
-  "author": "Css Ninja",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/cssninjaStudio/hr"
-  },
-  "homepage": "https://github.com/cssninjaStudio/hr"
+  }
 }
