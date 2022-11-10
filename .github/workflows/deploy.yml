@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  docker-build:
+  docker-build-demo:
     # We can skip deployment by adding [skip] in the commit body
     if: "!contains(github.event.head_commit.message, '[skip]')"
     runs-on: ubuntu-latest
@@ -47,7 +47,7 @@ jobs:
           cache-from: type=registry,ref=${{ env.dockertags }}
           cache-to: type=inline
 
-  docker-build:
+  docker-build-api:
     # We can skip deployment by adding [skip] in the commit body
     if: "!contains(github.event.head_commit.message, '[skip]')"
     runs-on: ubuntu-latest
