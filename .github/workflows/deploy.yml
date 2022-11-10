@@ -83,7 +83,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    needs: [docker-build]
+    needs: [docker-build-demo, docker-build-api]
 
     steps:
       - uses: actions/checkout@v3
