@@ -32,7 +32,7 @@ services:
       traefik.http.routers.hr-api.rule: 'Host(`api.hr.${HOST:-127.0.0.1.nip.io}`)'
       traefik.http.routers.hr-api.middlewares: 'https-redirect@docker'
       traefik.http.routers.hr-api.service: 'hr-api-https'
-      traefik.http.services.hr-api-https.loadbalancer.server.port: 8080
+      traefik.http.services.hr-api-https.loadbalancer.server.port: 8090
       traefik.http.routers.hr-api-https.rule: 'Host(`api.hr.${HOST:-127.0.0.1.nip.io}`)'
       traefik.http.routers.hr-api-https.tls: true
       traefik.http.routers.hr-api-https.entrypoints: 'https'
