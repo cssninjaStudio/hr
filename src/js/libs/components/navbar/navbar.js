@@ -1,7 +1,6 @@
 import { searchJSON } from "../search/searchJSON";
 
-const url = "http://localhost:5080/employees";
-//const url = "https://whispering-castle-04462.herokuapp.com/https://ninja-json-server.herokuapp.com/employees";
+const url = "{{API_SERVER}}/employees";
 
 export function initNavbar() {
   return {
