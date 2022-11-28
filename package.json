@@ -1,6 +1,6 @@
 {
   "name": "hr",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "HR - HR portal",
   "main": "gulpfile.js",
   "scripts": {
