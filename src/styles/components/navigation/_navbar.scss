@@ -79,7 +79,7 @@
         .navbar-item {
           &.is-search {
             flex-grow: 2;
-            max-width: 450px;
+            max-width: 340px;
             margin: 0 auto;
 
             .control {
@@ -235,6 +235,20 @@
     color: var(--medium-text);
     transition: color 0.3s;
 
+    > .social-item {
+      color: var(--medium-text);
+      transition: color 0.3s;
+
+      &:hover {
+        color: var(--primary);
+      }
+    }
+
+    > .button {
+      min-height: 44px;
+      min-width: 140px;
+    }
+
     &:hover {
       color: var(--primary);
     }
@@ -251,20 +265,6 @@
       .navbar-dropdown {
         width: 240px;
       }
-    }
-
-    > .social-item {
-      color: var(--medium-text);
-      transition: color 0.3s;
-
-      &:hover {
-        color: var(--primary);
-      }
-    }
-
-    > .button {
-      min-height: 44px;
-      min-width: 110px;
     }
   }
 }

@@ -1,8 +1,8 @@
-const { hsl } = require('bulma-css-vars')
+const { hsl } = require('@cssninja/bulma-css-vars')
 
 const appColors = {
   white: '#fff',
-  primary: hsl(226, 77, 56), // '#3861e5',
+  primary: hsl(239, 100, 59), // '#2e31ff',
   dark: hsl(226, 34, 24), // '#283252',
   link: hsl(229, 53, 53), // '#485fc7',
   info: hsl(200, 97, 45), // '#039be5',
@@ -12,10 +12,10 @@ const appColors = {
 }
 
 module.exports = {
-  jsOutputFile: 'src/scss/bulma-generated/bulma-colors.ts',
-  sassOutputFile: 'src/scss/bulma-generated/generated-vars.sass',
-  cssFallbackOutputFile: 'src/scss/bulma-generated/generated-fallback.css',
+  jsOutputFile: 'src/styles/bulma-generated/bulma-colors.ts',
+  sassOutputFile: 'src/styles/bulma-generated/generated-vars.sass',
+  cssFallbackOutputFile: 'src/styles/bulma-generated/generated-fallback.css',
   colorDefs: appColors,
-  sassEntryFile: 'src/scss/main.scss',
+  sassEntryFile: 'src/styles/main.scss',
   transition: null,
 }

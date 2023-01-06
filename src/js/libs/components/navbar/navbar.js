@@ -1,6 +1,6 @@
 import { searchJSON } from "../search/searchJSON";
 
-const url = "{{API_SERVER}}/employees";
+const url = "http://localhost:8090/employees";
 
 export function initNavbar() {
   return {

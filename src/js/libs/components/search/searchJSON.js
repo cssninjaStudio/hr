@@ -17,14 +17,14 @@ export function searchJSON(searchTerm, url) {
               value.position.search(expression) != -1
             ) {
               let template = `
-                        <a class="search-result" href="employee.html?id=${value.id}">
-                            <img class="avatar" src="${value.photo}" alt="">
-                            <div class="meta">
-                                <span>${value.fullName}</span>
-                                <span>${value.position}</span>
-                            </div>
-                        </a>
-                    `;
+                  <a class="search-result" href="/employee?id=${value.id}">
+                      <img class="avatar" src="${value.photo}" alt="">
+                      <div class="meta">
+                          <span>${value.fullName}</span>
+                          <span>${value.position}</span>
+                      </div>
+                  </a>
+              `;
               console.log(template);
               resultsContainer.innerHTML += template;
             }
@@ -32,14 +32,14 @@ export function searchJSON(searchTerm, url) {
           const results = resultsContainer.querySelectorAll(".search-result");
           if (results.length === 0) {
             let placeholder = `
-                      <div class="placeholder-wrap">
-                          <div class="placeholder-content has-text-centered">
-                              <img src="/img/illustrations/no-results.svg" alt="">
-                              <h3>No Matching Results</h3>
-                              <p>Sorry, we couldn't find any matching records. Please try different search terms.</p>
-                          </div>
-                      </div>
-                  `;
+                <div class="placeholder-wrap">
+                    <div class="placeholder-content has-text-centered">
+                        <img src="/img/illustrations/no-results.svg" alt="">
+                        <h3>No Matching Results</h3>
+                        <p>Sorry, we couldn't find any matching records. Please try different search terms.</p>
+                    </div>
+                </div>
+            `;
 
             resultsContainer.innerHTML += placeholder;
           }
