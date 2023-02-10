@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/cssninjaStudio/hr/compare/v2.0.0...v2.1.0) (2023-02-10)
+
+
+### Features
+
+* upgrade to Astro v2 ([df97d32](https://github.com/cssninjaStudio/hr/commit/df97d3278aaaa26986d9f20777f327a3f2fd89a3))
+
 ## [2.0.0](https://github.com/cssninjaStudio/hr/compare/v1.1.0...v2.0.0) (2023-01-06)
 
 
