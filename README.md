@@ -1,10 +1,10 @@
+![HR landing Screenshot](https://media.cssninja.io/products/hr/product.png "HR landing")
+
 # HR 👋 | An awesome Bulma + Alpine JS sample app
 
 [![cssninja-discord](https://img.shields.io/discord/785473098069311510?label=join%20us%20on%20discord&color=6944EC)](https://go.cssninja.io/discord)
 
 > HR is a sample alpine JS + Bulma app built by [Css Ninja Studio](https://cssninja.io). HR is licensed under the MIT license.
-
-![Screenshot](https://media.cssninja.io/products/hr/product.png "HR landing")
 
 ## ✌️ Preview
 
