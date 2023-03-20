@@ -11,7 +11,7 @@ COPY .npmrc ./
 RUN pnpm install --frozen-lockfile
 
 COPY . .
-RUN API=https://api.hr.cssninja.io/ pnpm build
+RUN API=https://api-hr.cssninja.io/ pnpm build
 
 
 FROM bitnami/nginx:1.22 AS prod
