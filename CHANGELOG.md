@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/cssninjaStudio/hr/compare/v2.1.0...v2.2.0) (2023-05-03)
+
+
+### Features
+
+* upgrade to astro 2 + add unplugin-fonts ([031ca7c](https://github.com/cssninjaStudio/hr/commit/031ca7cb2113298fcd68385a2c54056ade3dbabb))
+
+
+### Bug Fixes
+
+* update hr demo api url ([e510fc2](https://github.com/cssninjaStudio/hr/commit/e510fc2ecfd9a717950d404bd013b1314833dd31))
+* update hr demo api url ([6dab14d](https://github.com/cssninjaStudio/hr/commit/6dab14dfda5ef65de47f9d5586097fe4e1271cae))
+
 ## [2.1.0](https://github.com/cssninjaStudio/hr/compare/v2.0.0...v2.1.0) (2023-02-10)
 
 
