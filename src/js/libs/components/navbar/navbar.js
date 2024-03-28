@@ -1,6 +1,6 @@
 import { searchJSON } from "../search/searchJSON";
 
-const url = "http://localhost:8090/employees";
+const url = "https://api-hr.cssninja.io/employees";
 
 export function initNavbar() {
   return {
