@@ -1,4 +1,6 @@
-version: '3.7'
+networks:
+  cssninja-services:
+    external: true
 
 services:
   hr-demo:
@@ -39,6 +41,3 @@ services:
       traefik.http.routers.hr-api-https.tls.certresolver: 'http'
       traefik.http.routers.hr-api-https.service: 'hr-api-https'
 
-networks:
-  cssninja-services:
-    external: true
