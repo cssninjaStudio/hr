@@ -2,28 +2,28 @@
     "posts": [
         {
             "id": 0,
-            "image": "img/posts/1.jpg",
+            "image": "/img/posts/1.jpg",
             "title": "Reshaping Human Ressources",
             "category": "News",
-            "author": "img/avatars/1.jpg",
+            "author": "/img/avatars/1.jpg",
             "views": 832,
             "comments": 27
         },
         {
             "id": 1,
-            "image": "img/posts/2.jpg",
+            "image": "/img/posts/2.jpg",
             "title": "UX in HR management",
             "category": "Research",
-            "author": "img/avatars/2.jpg",
+            "author": "/img/avatars/2.jpg",
             "views": 741,
             "comments": 12
         },
         {
             "id": 1,
-            "image": "img/posts/3.jpg",
+            "image": "/img/posts/3.jpg",
             "title": "5 tips for optimal teamwork",
             "category": "Business Tips",
-            "author": "img/avatars/4.jpg",
+            "author": "/img/avatars/4.jpg",
             "views": 119,
             "comments": 8
         }
@@ -41,7 +41,7 @@
     "employees": [
         {
             "id": 0,
-            "photo": "img/avatars/1.jpg",
+            "photo": "/img/avatars/1.jpg",
             "firstName": "Matt",
             "lastName": "Williams",
             "fullName": "Matt Williams",
@@ -210,7 +210,7 @@
         },
         {
             "id": 1,
-            "photo": "img/avatars/2.jpg",
+            "photo": "/img/avatars/2.jpg",
             "firstName": "Rhonda",
             "lastName": "Jackson",
             "fullName": "Rhonda Jackson",
@@ -367,7 +367,7 @@
         },
         {
             "id": 2,
-            "photo": "img/avatars/3.jpeg",
+            "photo": "/img/avatars/3.jpeg",
             "firstName": "Emily",
             "lastName": "Cheng",
             "fullName": "Emily Cheng",
@@ -532,7 +532,7 @@
         },
         {
             "id": 3,
-            "photo": "img/avatars/4.jpg",
+            "photo": "/img/avatars/4.jpg",
             "firstName": "Mike",
             "lastName": "Wallace",
             "fullName": "Mike Wallace",
@@ -697,7 +697,7 @@
         },
         {
             "id": 4,
-            "photo": "img/avatars/13.jpg",
+            "photo": "/img/avatars/13.jpg",
             "firstName": "Anton",
             "lastName": "Jimenez",
             "fullName": "Anton Jimenez",
@@ -859,7 +859,7 @@
         },
         {
             "id": 5,
-            "photo": "img/avatars/19.jpg",
+            "photo": "/img/avatars/19.jpg",
             "firstName": "Adam",
             "lastName": "Felk",
             "fullName": "Adam Felk",
@@ -1031,7 +1031,7 @@
         },
         {
             "id": 6,
-            "photo": "img/avatars/7.jpg",
+            "photo": "/img/avatars/7.jpg",
             "firstName": "John",
             "lastName": "Baxter",
             "fullName": "John Baxter",
@@ -1209,7 +1209,7 @@
         },
         {
             "id": 7,
-            "photo": "img/avatars/22.jpg",
+            "photo": "/img/avatars/22.jpg",
             "firstName": "Houssam",
             "lastName": "Nasri",
             "fullName": "Houssam Nasri",
@@ -1363,7 +1363,7 @@
         },
         {
             "id": 8,
-            "photo": "img/avatars/14.jpg",
+            "photo": "/img/avatars/14.jpg",
             "firstName": "Miranda",
             "lastName": "Smith",
             "fullName": "Miranda Smith",
@@ -1523,7 +1523,7 @@
         },
         {
             "id": 9,
-            "photo": "img/avatars/16.jpg",
+            "photo": "/img/avatars/16.jpg",
             "firstName": "Mark",
             "lastName": "Greenberg",
             "fullName": "Mark Greenberg",
