@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0](https://github.com/cssninjaStudio/hr/compare/v2.2.0...v2.3.0) (2024-04-27)
+
+
+### Features
+
+* migrate to iconify-icon, update dependencies ([a609465](https://github.com/cssninjaStudio/hr/commit/a609465f4110f7f3778eba8e0746ae424cc8166c))
+
+
+### Bug Fixes
+
+* set absolute image paths ([9e87b0b](https://github.com/cssninjaStudio/hr/commit/9e87b0b2224bd14becb7349a0db9d0465c3cced5))
+* update broken links ([080c359](https://github.com/cssninjaStudio/hr/commit/080c359cd19d7d48fdd46fbc6c763354b7c6b028))
+
 ## [2.2.0](https://github.com/cssninjaStudio/hr/compare/v2.1.0...v2.2.0) (2023-05-03)
 
 
