@@ -2,14 +2,14 @@
   class="navbar is-transparent is-centered is-fixed-top is-fade"
   x-data="initNavbar()"
   x-on:scroll.window="scroll()"
-  :class="{
+  :class=`{
         'is-scrolled': scrolled,
         '': !scrolled,
         'is-solid': mobileOpen,
         '': !mobileOpen,
         'is-search-mobile': mobileSearch,
         '': !mobileSearch
-    }"
+    }`
 >
   <div class="container">
     <div class="navbar-brand">
@@ -21,13 +21,10 @@
       </a>
       <div class="navbar-burger" @click="openMobileMenu()">
         <div class="menu-toggle">
-          <div
-            class="icon-box-toggle is-navbar"
-            :class="{
+          <div class="icon-box-toggle is-navbar" :class=`{
                 'active': mobileOpen,
                 '': !mobileOpen
-            }"
-          >
+            }`>
             <div class="rotate">
               <i class="icon-line-top"></i>
               <i class="icon-line-center"></i>
@@ -37,13 +34,10 @@
         </div>
       </div>
     </div>
-    <div
-      class="navbar-menu b-centered-mobile b-centered-tablet-p"
-      :class="{
+    <div class="navbar-menu b-centered-mobile b-centered-tablet-p" :class=`{
             'is-active': mobileOpen,
             '': !mobileOpen
-        }"
-    >
+        }`>
       <div class="navbar-start">
         <div class="left-brand">
           <a class="navbar-item" href="/">
@@ -54,25 +48,14 @@
       <div class="navbar-center">
         <div class="navbar-item is-search">
           <div class="control has-icon">
-            <input
-              x-on:keyup="searchData($event)"
-              x-model="searchModel"
-              class="input is-rounded"
-              type="text"
-              placeholder="Search..."
-            />
+            <input x-on:keyup="searchData($event)" x-model="searchModel" class="input is-rounded" type="text" placeholder="Search..." />
             <span class="form-icon">
-              <i class="iconify" data-icon="feather:search"></i>
+              <iconify-icon class="iconify" icon="lucide:search"></iconify-icon>
             </span>
-            <span
-              class="icon is-small is-close is-right"
-              @click.prevent="toggleMobileSearch()"
-              :class="{ '': searchModel === '' }"
-            >
+            <span class="icon is-small is-close is-right" @click.prevent="toggleMobileSearch()" :class=`{ '': searchModel === '' }`>
               <i data-feather="x" class="no-click"></i>
             </span>
-            <div id="search-results" class="search-results has-slimscroll">
-            </div>
+            <div id="search-results" class="search-results has-slimscroll"></div>
           </div>
         </div>
       </div>
@@ -83,16 +66,13 @@
           <label class="theme-toggle">
             <input type="checkbox" x-on:change="toggleTheme()" />
             <span class="theme-toggle-inner">
-              <i class="sun-icon iconify" data-icon="feather:sun"></i>
-              <i class="moon-icon iconify" data-icon="feather:moon"></i>
+              <iconify-icon class="sun-icon iconify" icon="lucide:sun"></iconify-icon>
+              <iconify-icon class="moon-icon iconify" icon="lucide:moon"></iconify-icon>
             </span>
           </label>
         </div>
         <div class="navbar-item">
-          <a
-            href="https://cssninja.io/company/contact"
-            class="button is-primary is-long-3 raised"
-          >
+          <a href="https://cssninja.io/company/contact" class="button is-primary is-long-3 raised">
             <span>Get in Touch</span>
           </a>
         </div>

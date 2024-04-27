@@ -1,6 +1,6 @@
 ---
-import Layout from "../layouts/Default.astro";
-const title = "Employees";
+import Layout from '../layouts/Default.astro'
+const title = 'Employees'
 ---
 
 <Layout title={title}>
@@ -11,12 +11,7 @@ const title = "Employees";
           <div class="column">
             <div class="pt-10">
               <h1 class="title is-1 is-bold">Employees</h1>
-              <p
-                class="subtitle is-5 mb-4 mx-auto max-w-5 b-centered-tablet-p text-light"
-              >
-                Welcome to the employees directory. There are a lot of highly
-                skilled and talented people to discover.
-              </p>
+              <p class="subtitle is-5 mb-4 mx-auto max-w-5 b-centered-tablet-p text-light">Welcome to the employees directory. There are a lot of highly skilled and talented people to discover.</p>
             </div>
           </div>
         </div>
@@ -26,11 +21,7 @@ const title = "Employees";
 
   <div class="section is-grey">
     <div class="container">
-      <div
-        x-data="initEmployees()"
-        x-init="getEmployees()"
-        class="pb-12 mx-auto max-w-8"
-      >
+      <div x-data="initEmployees()" x-init="getEmployees()" class="pb-12 mx-auto max-w-8">
         <template x-if="!isLoading">
           <div class="flex-table">
             <!--Table header-->
@@ -47,56 +38,33 @@ const title = "Employees";
               <template x-for="(employee, index) in employees" :key="index">
                 <div class="flex-table-item">
                   <div class="flex-table-cell is-media is-grow">
-                    <img
-                      class="block size-44x44 is-circle no-m"
-                      :src="employee.photo"
-                      alt=""
-                    />
+                    <img class="block size-44x44 is-circle no-m" :src="employee.photo" alt="" />
                     <div>
-                      <span
-                        class="item-name dark-inverted"
-                        x-text="employee.fullName">John Doe</span
-                      >
+                      <span class="item-name dark-inverted" x-text="employee.fullName">John Doe</span>
                       <span class="item-meta">
                         <span x-text="employee.position">Product Manager</span>
                       </span>
                     </div>
                   </div>
                   <div class="flex-table-cell" data-th="Department">
-                    <span class="text-medium" x-text="employee.department"
-                      >Marketing</span
-                    >
+                    <span class="text-medium" x-text="employee.department">Marketing</span>
                   </div>
                   <div class="flex-table-cell" data-th="Location">
-                    <span class="text-light" x-text="employee.location"
-                      >New York, NY</span
-                    >
+                    <span class="text-light" x-text="employee.location">New York, NY</span>
                   </div>
                   <div class="flex-table-cell" data-th="Status">
                     <template x-if="employee.status === 'Available'">
-                      <span
-                        class="tag is-success is-rounded"
-                        x-text="employee.status">Status</span
-                      >
+                      <span class="tag is-success is-rounded" x-text="employee.status">Status</span>
                     </template>
                     <template x-if="employee.status === 'Away'">
-                      <span class="tag is-rounded" x-text="employee.status"
-                        >Status</span
-                      >
+                      <span class="tag is-rounded" x-text="employee.status">Status</span>
                     </template>
                     <template x-if="employee.status === 'Busy'">
-                      <span
-                        class="tag is-danger is-rounded"
-                        x-text="employee.status">Status</span
-                      >
+                      <span class="tag is-danger is-rounded" x-text="employee.status">Status</span>
                     </template>
                   </div>
                   <div class="flex-table-cell cell-end" data-th="Actions">
-                    <a
-                      :href="'/employee?id=' + employee.id"
-                      class="button view-details-button is-pushed-mobile"
-                      >View</a
-                    >
+                    <a :href="'/employee?id=' + employee.id" class="button view-details-button is-pushed-mobile">View</a>
                   </div>
                 </div>
               </template>
@@ -128,15 +96,13 @@ const title = "Employees";
             <!--Table item-->
             <div class="flex-table-item">
               <div class="flex-table-cell is-media is-grow">
-                <div class="block size-44x44 is-circle no-m loads" ></div>
+                <div class="block size-44x44 is-circle no-m loads"></div>
                 <div>
                   <span class="item-name dark-inverted">
-                    <span class="content-shape loads title-shape is-left"
-                    ></span>
+                    <span class="content-shape loads title-shape is-left"></span>
                   </span>
                   <span class="item-meta">
-                    <span class="content-shape loads subtitle-shape is-left"
-                    ></span>
+                    <span class="content-shape loads subtitle-shape is-left"></span>
                   </span>
                 </div>
               </div>
@@ -160,12 +126,10 @@ const title = "Employees";
                 <div class="block size-44x44 is-circle no-m loads"></div>
                 <div>
                   <span class="item-name dark-inverted">
-                    <span class="content-shape loads title-shape is-left"
-                    ></span>
+                    <span class="content-shape loads title-shape is-left"></span>
                   </span>
                   <span class="item-meta">
-                    <span class="content-shape loads subtitle-shape is-left"
-                    ></span>
+                    <span class="content-shape loads subtitle-shape is-left"></span>
                   </span>
                 </div>
               </div>
@@ -189,12 +153,10 @@ const title = "Employees";
                 <div class="block size-44x44 is-circle no-m loads"></div>
                 <div>
                   <span class="item-name dark-inverted">
-                    <span class="content-shape loads title-shape is-left"
-                    ></span>
+                    <span class="content-shape loads title-shape is-left"></span>
                   </span>
                   <span class="item-meta">
-                    <span class="content-shape loads subtitle-shape is-left"
-                    ></span>
+                    <span class="content-shape loads subtitle-shape is-left"></span>
                   </span>
                 </div>
               </div>
@@ -218,12 +180,10 @@ const title = "Employees";
                 <div class="block size-44x44 is-circle no-m loads"></div>
                 <div>
                   <span class="item-name dark-inverted">
-                    <span class="content-shape loads title-shape is-left"
-                    ></span>
+                    <span class="content-shape loads title-shape is-left"></span>
                   </span>
                   <span class="item-meta">
-                    <span class="content-shape loads subtitle-shape is-left"
-                    ></span>
+                    <span class="content-shape loads subtitle-shape is-left"></span>
                   </span>
                 </div>
               </div>
@@ -247,12 +207,10 @@ const title = "Employees";
                 <div class="block size-44x44 is-circle no-m loads"></div>
                 <div>
                   <span class="item-name dark-inverted">
-                    <span class="content-shape loads title-shape is-left"
-                    ></span>
+                    <span class="content-shape loads title-shape is-left"></span>
                   </span>
                   <span class="item-meta">
-                    <span class="content-shape loads subtitle-shape is-left"
-                    ></span>
+                    <span class="content-shape loads subtitle-shape is-left"></span>
                   </span>
                 </div>
               </div>

@@ -157,7 +157,10 @@ Details page
         color: var(--light-text);
         transition: color 0.3s;
 
-        svg {
+        svg, .iconify {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           height: 16px;
           width: 16px;
           margin-right: 0.25rem;
@@ -198,7 +201,10 @@ Details page
             margin-left: 0.15rem;
           }
 
-          svg {
+          svg, .iconify {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             height: 18px;
             width: 18px;
             stroke: var(--primary);

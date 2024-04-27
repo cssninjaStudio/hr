@@ -1,16 +1,12 @@
 ---
-import Layout from "../layouts/Default.astro";
-const title = "Employee";
+import Layout from '../layouts/Default.astro'
+const title = 'Employee'
 ---
 
 <Layout title={title}>
   <div class="section is-grey">
     <div class="container">
-      <div
-        x-data="initEmployee()"
-        x-init="getEmployee()"
-        class="profile-wrapper"
-      >
+      <div x-data="initEmployee()" x-init="getEmployee()" class="profile-wrapper">
         <template x-if="!isEmpty">
           <div>
             <template x-if="!isLoading">
@@ -26,33 +22,22 @@ const title = "Employee";
                   <p x-text="employee.position">Software Engineer</p>
 
                   <div class="social-profiles">
-                    <template
-                      x-for="(socialProfile, index) in employee.socialProfiles"
-                      :key="index"
-                    >
+                    <template x-for="(socialProfile, index) in employee.socialProfiles" :key="index">
                       <a :href="socialProfile.channelUrl">
-                        <template
-                          x-if="socialProfile.channelName === 'Facebook'"
-                        >
-                          <i class="iconify" data-icon="fa:facebook"></i>
+                        <template x-if="socialProfile.channelName === 'Facebook'">
+                          <iconify-icon class="iconify" icon="fa:facebook"></iconify-icon>
                         </template>
-                        <template
-                          x-if="socialProfile.channelName === 'Twitter'"
-                        >
-                          <i class="iconify" data-icon="fa:twitter"></i>
+                        <template x-if="socialProfile.channelName === 'Twitter'">
+                          <iconify-icon class="iconify" icon="fa:twitter"></iconify-icon>
                         </template>
                         <template x-if="socialProfile.channelName === 'GitHub'">
-                          <i class="iconify" data-icon="fa:github"></i>
+                          <iconify-icon class="iconify" icon="fa:github"></iconify-icon>
                         </template>
-                        <template
-                          x-if="socialProfile.channelName === 'Dribbble'"
-                        >
-                          <i class="iconify" data-icon="fa:dribbble"></i>
+                        <template x-if="socialProfile.channelName === 'Dribbble'">
+                          <iconify-icon class="iconify" icon="fa:dribbble"></iconify-icon>
                         </template>
-                        <template
-                          x-if="socialProfile.channelName === 'Linkedin'"
-                        >
-                          <i class="iconify" data-icon="fa:linkedin"></i>
+                        <template x-if="socialProfile.channelName === 'Linkedin'">
+                          <iconify-icon class="iconify" icon="fa:linkedin"></iconify-icon>
                         </template>
                       </a>
                     </template>
@@ -64,22 +49,19 @@ const title = "Employee";
                   <div class="profile-card-head">
                     <h3>About</h3>
                     <a class="header-link" href="#">
-                      <i class="iconify" data-icon="feather:edit-3"></i>
+                      <iconify-icon class="iconify" icon="lucide:edit-3"></iconify-icon>
                       <span>Edit</span>
                     </a>
                   </div>
 
                   <div class="profile-card-body">
                     <p x-text="employee.bio">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Paria sunt igitur. Eam tum adesse, cum dolor omnis absit;
-                      Suo genere perveniant ad extremum; Ita credo. Duo Reges:
-                      constructio interrete. Nihil opus est exemplis hoc facere
-                      longius.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Paria sunt igitur. Eam tum adesse, cum dolor omnis absit; Suo genere perveniant ad extremum; Ita credo. Duo Reges:
+                      constructio interrete. Nihil opus est exemplis hoc facere longius.
                     </p>
                     <div class="location">
                       <p>
-                        <i class="iconify" data-icon="feather:map-pin"></i>
+                        <iconify-icon class="iconify" icon="lucide:map-pin"></iconify-icon>
                         <span x-text="employee.firstName"></span>
                         <span>lives in</span>
                         <span class="address" x-text="employee.location"></span>
@@ -98,22 +80,14 @@ const title = "Employee";
                   <div class="profile-card-body">
                     <div class="projects">
                       <div class="columns">
-                        <template
-                          x-for="(project, index) in employee.projects"
-                          :key="index"
-                        >
+                        <template x-for="(project, index) in employee.projects" :key="index">
                           <div class="column is-4">
                             <a class="project">
                               <img :src="project.image" alt="" />
                               <h3 x-text="project.title">Sample Project</h3>
-                              <p x-text="project.subtitle">
-                                Some nice project subtitle
-                              </p>
+                              <p x-text="project.subtitle">Some nice project subtitle</p>
                               <div class="project-members">
-                                <template
-                                  x-for="(member, index) in project.members"
-                                  :key="index"
-                                >
+                                <template x-for="(member, index) in project.members" :key="index">
                                   <div><img :src="member.photo" alt="" /></div>
                                 </template>
                               </div>
@@ -130,7 +104,7 @@ const title = "Employee";
                   <div class="profile-card-head">
                     <h3>Tools & Skills</h3>
                     <a class="header-link" href="#">
-                      <i class="iconify" data-icon="feather:edit-3"></i>
+                      <iconify-icon class="iconify" icon="lucide:edit-3"></iconify-icon>
                       <span>Edit</span>
                     </a>
                   </div>
@@ -141,15 +115,9 @@ const title = "Employee";
                         <div class="column is-4">
                           <div class="skill-box">
                             <h3>Primary Skills</h3>
-                            <p>
-                              Primary skills are the ones used every day at
-                              work.
-                            </p>
+                            <p>Primary skills are the ones used every day at work.</p>
                             <div class="skill-list">
-                              <template
-                                x-for="(skill, index) in employee.skills"
-                                :key="index"
-                              >
+                              <template x-for="(skill, index) in employee.skills" :key="index">
                                 <img :src="skill.skillIcon" alt="" />
                               </template>
                             </div>
@@ -161,10 +129,7 @@ const title = "Employee";
                             <h3>Secondary Skills</h3>
                             <p>Sub skills are used from time to time.</p>
                             <div class="skill-list">
-                              <template
-                                x-for="(subskill, index) in employee.subskills"
-                                :key="index"
-                              >
+                              <template x-for="(subskill, index) in employee.subskills" :key="index">
                                 <img :src="subskill.skillIcon" alt="" />
                               </template>
                             </div>
@@ -176,10 +141,7 @@ const title = "Employee";
                             <h3>Tools</h3>
                             <p>Tools used often or every day at the office.</p>
                             <div class="skill-list">
-                              <template
-                                x-for="(tool, index) in employee.tools"
-                                :key="index"
-                              >
+                              <template x-for="(tool, index) in employee.tools" :key="index">
                                 <img :src="tool.toolIcon" alt="" />
                               </template>
                             </div>
@@ -195,32 +157,21 @@ const title = "Employee";
                   <div class="profile-card-head">
                     <h3>Experience</h3>
                     <a class="header-link" href="#">
-                      <i class="iconify" data-icon="feather:edit-3"></i>
+                      <iconify-icon class="iconify" icon="lucide:edit-3"></iconify-icon>
                       <span>Edit</span>
                     </a>
                   </div>
                   <div class="profile-card-body">
                     <div class="experiences">
                       <!--Experience items-->
-                      <template
-                        x-for="(job, index) in employee.jobs"
-                        :key="index"
-                      >
+                      <template x-for="(job, index) in employee.jobs" :key="index">
                         <div class="experience">
                           <img :src="job.logo" alt="" />
                           <div class="meta">
                             <h3 x-text="job.position">UI/UX Designer</h3>
-                            <span x-text="job.company + ' | ' + job.type"
-                              >Company name</span
-                            >
-                            <span x-text="job.timeline">Jun 2020 - Present</span
-                            >
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Paria sunt igitur. Eam tum adesse, cum dolor
-                              omnis absit; Suo genere perveniant ad extremum;
-                              Ita credo.
-                            </p>
+                            <span x-text="job.company + ' | ' + job.type">Company name</span>
+                            <span x-text="job.timeline">Jun 2020 - Present</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Paria sunt igitur. Eam tum adesse, cum dolor omnis absit; Suo genere perveniant ad extremum; Ita credo.</p>
                           </div>
                         </div>
                       </template>
@@ -233,33 +184,21 @@ const title = "Employee";
                   <div class="profile-card-head">
                     <h3>Education</h3>
                     <a class="header-link" href="#">
-                      <i class="iconify" data-icon="feather:edit-3"></i>
+                      <iconify-icon class="iconify" icon="lucide:edit-3"></iconify-icon>
                       <span>Edit</span>
                     </a>
                   </div>
                   <div class="profile-card-body">
                     <div class="educations">
                       <!--Education item-->
-                      <template
-                        x-for="(item, index) in employee.education"
-                        :key="index"
-                      >
+                      <template x-for="(item, index) in employee.education" :key="index">
                         <div class="education">
                           <img :src="item.logo" alt="" />
                           <div class="meta">
                             <h3 x-text="item.name">Master in Design and UX</h3>
-                            <span x-text="item.school + ' | ' + item.type"
-                              >School name</span
-                            >
-                            <span x-text="item.timeline"
-                              >Sep 2014 - Jun 2016</span
-                            >
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                              elit. Paria sunt igitur. Eam tum adesse, cum dolor
-                              omnis absit; Suo genere perveniant ad extremum;
-                              Ita credo.
-                            </p>
+                            <span x-text="item.school + ' | ' + item.type">School name</span>
+                            <span x-text="item.timeline">Sep 2014 - Jun 2016</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Paria sunt igitur. Eam tum adesse, cum dolor omnis absit; Suo genere perveniant ad extremum; Ita credo.</p>
                           </div>
                         </div>
                       </template>
@@ -273,9 +212,7 @@ const title = "Employee";
               <div>
                 <div class="topbar">
                   <h3><span class="content-shape loads"></span></h3>
-                  <a class="header-link"
-                    ><span class="content-shape loads"></span>
-                  </a>
+                  <a class="header-link"><span class="content-shape loads"></span> </a>
                 </div>
 
                 <div class="employee-block">
@@ -297,9 +234,7 @@ const title = "Employee";
                 <div class="profile-card">
                   <div class="profile-card-head">
                     <h3><span class="content-shape loads"></span></h3>
-                    <a class="header-link"
-                      ><span class="content-shape loads"></span>
-                    </a>
+                    <a class="header-link"><span class="content-shape loads"></span> </a>
                   </div>
 
                   <div class="profile-card-body">
@@ -319,9 +254,7 @@ const title = "Employee";
                 <div class="profile-card">
                   <div class="profile-card-head">
                     <h3><span class="content-shape loads"></span></h3>
-                    <a class="header-link"
-                      ><span class="content-shape loads"></span>
-                    </a>
+                    <a class="header-link"><span class="content-shape loads"></span> </a>
                   </div>
 
                   <div class="profile-card-body">
@@ -341,9 +274,7 @@ const title = "Employee";
                 <div class="profile-card">
                   <div class="profile-card-head">
                     <h3><span class="content-shape loads"></span></h3>
-                    <a class="header-link"
-                      ><span class="content-shape loads"></span>
-                    </a>
+                    <a class="header-link"><span class="content-shape loads"></span> </a>
                   </div>
 
                   <div class="profile-card-body">
@@ -363,9 +294,7 @@ const title = "Employee";
                 <div class="profile-card">
                   <div class="profile-card-head">
                     <h3><span class="content-shape loads"></span></h3>
-                    <a class="header-link"
-                      ><span class="content-shape loads"></span>
-                    </a>
+                    <a class="header-link"><span class="content-shape loads"></span> </a>
                   </div>
 
                   <div class="profile-card-body">
@@ -391,12 +320,8 @@ const title = "Employee";
             <div class="placeholder-content">
               <img src="/img/illustrations/feature-2.svg" alt="" />
               <h3>No Record found</h3>
-              <p>
-                Looks like we couldn't find the resource you were looking for
-              </p>
-              <a href="/employees" class="button is-primary is-long-2"
-                >Take me Back</a
-              >
+              <p>Looks like we couldn't find the resource you were looking for</p>
+              <a href="/employees" class="button is-primary is-long-2">Take me Back</a>
             </div>
           </div>
         </template>
